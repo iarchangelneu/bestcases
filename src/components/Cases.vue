@@ -92,11 +92,11 @@
             <div class="casses__card">
               <img src="../assets/img/GammaCase.png" alt="" class="casses__img">
               <div class="card__footer">
-                <div class="casses__name">
+                <div class="casses__name casses__namePop">
                 Кейс “Gamma”
                 </div>
-                <div class="casses__btn">
-                  <span>от</span>&nbsp; 5 690 ₸
+                <div class="casses__btnR">
+                  <span>от</span>&nbsp; 3 500 ₸
                 </div>
               </div>
             </div>
@@ -104,11 +104,11 @@
             <div class="casses__card">
               <img src="../assets/img/RestrictedCase.png" alt="" class="casses__img">
               <div class="card__footer">
-                <div class="casses__name">
-                Кейс “Restricted”
+                <div class="casses__name casses__namePop">
+                Кейс “Запретная зона”
                 </div>
-                <div class="casses__btn">
-                  <span>от</span>&nbsp; 15 990 ₸
+                <div class="casses__btnR">
+                  <span>от</span>&nbsp; 3 700 ₸
                 </div>
               </div>
             </div>
@@ -116,11 +116,11 @@
             <div class="casses__card">
               <img src="../assets/img/InfernoCase.png" alt="" class="casses__img">
               <div class="card__footer">
-                <div class="casses__name">
-                Кейс “Inferno”
+                <div class="casses__name casses__namePop">
+                Кейс “Huntsman”
                 </div>
-                <div class="casses__btn">
-                  <span>от</span>&nbsp; 200 590 ₸
+                <div class="casses__btnR">
+                  <span>от</span>&nbsp; 3 000 ₸
                 </div>
               </div>
             </div>
@@ -128,11 +128,11 @@
             <div class="casses__card">
               <img src="../assets/img/BravoCase.png" alt="" class="casses__img">
               <div class="card__footer">
-                <div class="casses__name">
+                <div class="casses__name casses__namePop">
                 Кейс “Bravo”
                 </div>
-                <div class="casses__btn">
-                  <span>от</span>&nbsp; 7 390 ₸
+                <div class="casses__btnR">
+                  <span>от</span>&nbsp; 4 390 ₸
                 </div>
               </div>
             </div>
@@ -140,17 +140,83 @@
             <div class="casses__card">
               <img src="../assets/img/RevolverCase.png" alt="" class="casses__img">
               <div class="card__footer">
-                <div class="casses__name">
+                <div class="casses__name casses__namePop">
                 Кейс “Revolver”
                 </div>
-                <div class="casses__btn">
-                  <span>от</span>&nbsp; 3 590 ₸
+                <div class="casses__btnR">
+                  <span>от</span>&nbsp; 2 590 ₸
                 </div>
               </div>
             </div>
           </div>
         </div>
 
+        <div class="casses__section">
+          <span class="casses__title">
+            <img src="../assets/img/BestCases.png" alt="">
+          </span>
+          <div class="casses__row">
+            <div class="casses__card">
+              <img src="../assets/img/BestP20001.png" alt="" class="casses__img">
+              <div class="card__footer">
+                <div class="casses__name casses__namePop">
+                P2000 “Imperial Dragon”
+                </div>
+                <div class="casses__btnR">
+                  <span>Купить за</span>&nbsp; 4 000 ₸
+                </div>
+              </div>
+            </div>
+
+            <div class="casses__card">
+              <img src="../assets/img/BestAwp.png" alt="" class="casses__img">
+              <div class="card__footer">
+                <div class="casses__name casses__namePop">
+                AWP “Asiimov”
+                </div>
+                <div class="casses__btnR">
+                  <span>Купить за</span>&nbsp; 40 000 ₸
+                </div>
+              </div>
+            </div>
+
+            <div class="casses__card">
+              <img src="../assets/img/BestKarambit.png" alt="" class="casses__img">
+              <div class="card__footer">
+                <div class="casses__name casses__namePop">
+                Karambit “Fade
+                </div>
+                <div class="casses__btnR">
+                  <span>Купить за</span>&nbsp; 500 000 ₸
+                </div>
+              </div>
+            </div>
+
+            <div class="casses__card">
+              <img src="../assets/img/BestM4a4.png" alt="" class="casses__img">
+              <div class="card__footer">
+                <div class="casses__name casses__namePop">
+                M4A4 "Howl"
+                </div>
+                <div class="casses__btnR">
+                  <span>Купить за</span>&nbsp; 110 000 ₸
+                </div>
+              </div>
+            </div>
+
+            <div class="casses__card">
+              <img src="../assets/img/BestAug.png" alt="" class="casses__img">
+              <div class="card__footer">
+                <div class="casses__name casses__namePop">
+                Aug "Akihabara"
+                </div>
+                <div class="casses__btnR">
+                  <span>Купить за</span>&nbsp; 84 000 ₸
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
         
 
 
@@ -261,7 +327,26 @@ export default {
   font-size: 1.042vw;
   color: rgba(255, 255, 255, 0.3);
 }
-
+.casses__namePop{
+  text-align: center;
+  margin-top: 1vw;
+}
+.casses__btnR {
+  text-align: center;
+  font-family: "Roboto";
+  background: rgba(241, 90, 36, 0.4);
+  border: 1px solid #f15a24;
+  box-sizing: border-box;
+  border-radius: 5px;
+  color: #fff;
+  padding: 0.94vw 3.02vw 0.94vw 3.02vw;
+  font-weight: 400;
+  font-size: 1.04vw;
+  margin-top: 2.08vw;
+  /* margin-bottom: 3.13vw; */
+  /* -webkit-clip-path: polygon(0 10%, 100% 0, 100% -90%, 0 100%);
+  clip-path: polygon(10% 0, 0 100%, 90% 100%, 100% 0); */
+}
 
 
 
@@ -295,6 +380,11 @@ export default {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  padding: 10px;
+}
+.casses__card:hover{
+  
+  background: radial-gradient(82.39% 82.39% at 50% 50%, rgba(30, 29, 33, 0.4) 0%, rgba(60, 59, 63, 0.4) 100%)
 }
 .casses__img{
   width: 14.323vw;
@@ -303,6 +393,10 @@ export default {
   font-weight: 900;
   font-size: 1.146vw;
   margin-top: 2.204vw;
+}
+.casses__namePop{
+  text-align: center;
+  margin-top: 1vw;
 }
 .casses__btn{
   font-size: 1.250vw;
