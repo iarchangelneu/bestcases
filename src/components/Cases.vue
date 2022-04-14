@@ -6,7 +6,7 @@
           <span class="casses__title">
             <img src="../assets/img/SalesCases.png" alt="">
           </span>
-          <div class="casses__row">
+          <div class="casses__row" @click="tryToBuy">
             <div class="casses__card">
               <div class="cases__sale">
                 -5%
@@ -88,7 +88,7 @@
           <span class="casses__title">
             <img src="../assets/img/PopularCases.png" alt="">
           </span>
-          <div class="casses__row">
+          <div class="casses__row" @click="tryToBuy">
             <div class="casses__card">
               <img src="../assets/img/GammaCase.png" alt="" class="casses__img">
               <div class="card__footer">
@@ -155,7 +155,7 @@
           <span class="casses__title">
             <img src="../assets/img/BestCases.png" alt="">
           </span>
-          <div class="casses__row">
+          <div class="casses__row" @click="tryToBuy">
             <div class="casses__card">
               <img src="../assets/img/BestP20001.png" alt="" class="casses__img">
               <div class="card__footer">
@@ -315,6 +315,9 @@ export default {
 </script>
 
 <style scoped>
+.casses__card{
+  cursor: pointer;
+}
 .cases__sale{
   background: rgba(241, 90, 36, 0.4);  
   border: 1px solid #F15A24;
