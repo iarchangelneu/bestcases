@@ -25,7 +25,8 @@ export default {
   color: #fff;
 }
 .active {
- color: #2C6DF5;
+color:rgba(241, 90, 36, 0.6);
+background: linear-gradient(176.7deg, rgba(241, 90, 36, 0) 38.92%, rgba(241, 90, 36, 0.6) 97.28%);
 }
 @media screen and (max-width: 480px){
 .navbar__btn {

@@ -92,11 +92,11 @@
         <div class="modal-footer">
           <div class="money__complete">
             <input
-              type="text"
+              type="number"
               name="money"
               id="money"
               class="money__input"
-              placeholder="Cумма ₸"
+              placeholder="0 ₸"
             />
             <button class="complete__btn">Пополнить баланс</button>
           </div>
@@ -127,29 +127,34 @@ export default {
   display: flex;
 }
 .complete__btn {
-  background: #2c6df5;
+  background: rgba(241, 90, 36, 0.4);
+  border: 1px solid #f15a24;
+  box-sizing: border-box;
   border-radius: 5px;
   color: #fff;
-  padding: 0.83vw 2.6vw 0.83vw 2.6vw;
-  font-weight: 500;
+  padding: 0.94vw 8.70vw 0.94vw 8.70vw;
+  font-weight: 400;
   font-size: 1.04vw;
   border: 0;
+  -webkit-clip-path: polygon(0 10%, 100% 0, 100% -90%, 0 100%);
+  clip-path: polygon(10% 0, 0 100%, 90% 100%, 100% 0);
+  margin-bottom:2.08vw;
 }
 ::placeholder {
+  color: #fff;
   font-size: 1.25vw;
+  text-align: center;
 }
 .money__input {
-  padding-left: 1.82vw;
-  background: #1e1c2a;
-  border: 1px solid #246bff;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.1);
   box-sizing: border-box;
-  box-shadow: 0px 0px 10px #2c6df5;
   border-radius: 5px;
   font-weight: 500;
   font-size: 2.08vw;
   color: #fff;
-  width: 10.83vw;
-  margin-right: 1.77vw;
+  width: 16.77vw;
+  margin-bottom: 1.25vw;
 }
 .mt {
   margin-top: 2.5vw;
@@ -182,12 +187,12 @@ input[type="checkbox"] {
   margin-right: 1.69vw;
   padding: 0.52vw 1.56vw 0.52vw 1.56vw;
   cursor: pointer;
-  width: 12.448vw;
+  width: 7.448vw;
   display: flex;
   align-items: center;
 }
 .payment__active {
-  border: 1px solid #2C6DF5;
+  border: 1px solid #f15a24;
 }
 .pay_img {
   width: 3.8vw;
@@ -230,7 +235,7 @@ input[type="checkbox"] {
   color: #fff;
 }
 .money__type {
-  margin-left: 1.5vw;
+  margin-left: 8.5vw;
 }
 .money__main {
   font-weight: 900;
@@ -240,14 +245,13 @@ input[type="checkbox"] {
   color: #fff;
 }
 .modal-dialog {
-  min-width: 31.93vw;
+  min-width: 41.67vw;
 }
 .modal-contents {
-  background: #141721;
-  border: 1px solid #12b004 !important;
+  background: #1a1814;
+  border: 1px solid rgba(234, 196, 139, 0.5);
   box-sizing: border-box;
-  box-shadow: 0px 0px 10px #12b004 !important;
-  border-radius: 0 !important;
+  border-radius: 5px;
   position: relative;
   display: flex;
   flex-direction: column;
@@ -264,11 +268,11 @@ input[type="checkbox"] {
   display: contents;
 }
 @media screen and (max-width: 480px) {
-  .pay_img{
-    width:10vw
+  .pay_img {
+    width: 10vw;
   }
-  .money__type{
-    margin-left:22.5vw
+  .money__type {
+    margin-left: 22.5vw;
   }
   .money__main {
     font-size: 3.2vw !important;

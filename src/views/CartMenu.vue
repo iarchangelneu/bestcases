@@ -211,6 +211,7 @@ hr {
   overflow: auto;
   background: #1a1814;
   box-shadow: -10px 0px 15px rgba(0, 0, 0, 0.15);
+
 }
 .cart__productIMG {
   background: rgba(48, 47, 56, 0.5);

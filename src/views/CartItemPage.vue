@@ -8,7 +8,11 @@
       @deleteCart="deleteCart(i)"
     >
       <div class="product__content">
-        <img :src="'/data/'+item.item_model_id" alt="" style="width: 16.46vw" />
+        <img
+          :src="'/data/' + item.item_model_id"
+          alt=""
+          style="width: 16.46vw"
+        />
         <div class="product__desc">
           <p class="product__name">{{ item.name }} {{ item.collection }}</p>
           <p class="product__text">{{ item.rarity }}</p>
@@ -92,7 +96,7 @@ export default {
 }
 .product__overflow::-webkit-scrollbar-thumb {
   border-radius: 0.78vw;
-  background-color: #2C6DF5;
+  background-color: #f15a24;
 }
 .product__overflow::-webkit-scrollbar-track {
   -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.2);

@@ -36,8 +36,10 @@
     <template #body>
       <div class="modal__body">
         <p class="modal__text">Упс... Что-то не так</p>
-        <p class="modal__text">Произошла ошибка. Для того, чтобы продолжить вам<br>
-         необходимо авторизоваться</p>
+        <p class="modal__text">
+          Произошла ошибка. Для того, чтобы продолжить вам<br />
+          необходимо авторизоваться
+        </p>
       </div>
     </template>
     <template #footer>
@@ -235,13 +237,13 @@ export default {
   display: flex;
   font-weight: 400;
   font-size: 1.04vw;
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(241, 90, 36, 0.4);
+  border: 1px solid #f15a24;
   box-sizing: border-box;
-  background: #2c6df5;
   border-radius: 5px;
   align-items: center;
   color: #fff;
-  padding: 0.83vw 8.23vw 0.83vw 8.23vw;
+  padding: 0.94vw 8.18vw 0.94vw 8.18vw;
   width: 100%;
 }
 .haveacc__button {
@@ -264,7 +266,7 @@ export default {
   font-size: 1.04vw;
   letter-spacing: 0.03em;
   text-decoration-line: underline;
-  color: #2c6df5;
+  color: #f15a24;
   margin-left: 0.5vw;
 }
 .haveacc__main {
@@ -287,10 +289,14 @@ export default {
   padding-left: 1.82vw;
 }
 .modal__input {
-  background: #141721;
-  box-shadow: 0px 0px 4px #2c6df5;
-  border: 1px solid #246bff;
+  background: radial-gradient(
+    82.39% 82.39% at 50% 50%,
+    rgba(30, 29, 33, 0.4) 0%,
+    rgba(60, 59, 63, 0.4) 100%
+  );
+  border: 1px solid #6d6d6d;
   box-sizing: border-box;
+  border-radius: 5px;
   width: 26.61vw;
   height: 3.13vw !important;
   border: 0;
@@ -307,13 +313,16 @@ export default {
 }
 .modal__signin {
   font-family: "Roboto";
-  border: 0;
-  background: #2c6df5;
+  background: rgba(241, 90, 36, 0.4);
+  border: 1px solid #f15a24;
+  box-sizing: border-box;
   border-radius: 5px;
-  padding: 0.83vw 11.99vw 0.83vw 11.99vw;
+  padding: 0.94vw 11.77vw 0.94vw 11.77vw;
   font-weight: 400;
   font-size: 1.04vw;
   color: #fff;
+  -webkit-clip-path: polygon(0 10%, 100% 0, 100% -90%, 0 100%);
+  clip-path: polygon(10% 0, 0 100%, 90% 100%, 100% 0);
 }
 .logreg__main {
   font-family: "Impact";
@@ -325,21 +334,21 @@ export default {
   padding-top: 1.93vw;
 }
 .modal__href {
-  color: #fff;
+  color: #000;
 }
 .modal__href:hover {
   text-decoration: none;
 }
 .modal__button {
-  background: #2c6df5;
+  background: #fff;
   border-radius: 5px;
   padding: 0.83vw 8.75vw 0.83vw 8.75vw;
   border: 0;
   font-weight: 400;
   font-size: 1.04vw;
-  color: #fff;
+  color: #000;
   text-align: center;
-  margin-bottom:1.2vw;
+  margin-bottom: 1.2vw;
 }
 .modal__btn {
   padding-top: 0.45vw;
@@ -370,8 +379,8 @@ export default {
   color: #fff;
 }
 @media screen and (max-width: 480px) {
-  .modal__textOps{
-    font-family: 'Roboto';
+  .modal__textOps {
+    font-family: "Roboto";
     font-size: 3vw;
   }
   .modal__text {

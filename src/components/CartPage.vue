@@ -1,7 +1,9 @@
 <template>
+  <div class="lc__title">
+    <img src="@/assets/img/cartlc.svg" style="width: 20.83vw" alt="" />
+  </div>
   <div class="cart__page pl__pr">
     <div class="cart__pagecontent p__content">
-      <p class="cart__main">Корзина</p>
       <cart-item-page :cart_data="CART_PLS"></cart-item-page>
       <hr />
       <div class="product__summary">
@@ -58,10 +60,17 @@ export default {
 </script>
 
 <style scoped>
+.lc__title {
+  padding-top: 10vw;
+  display: flex;
+  justify-content: center;
+}
 .buy__btn {
-  background: #2c6df5;
+  background: rgba(241, 90, 36, 0.4);
+  border: 1px solid #f15a24;
+  box-sizing: border-box;
   border-radius: 5px;
-  padding: 0.83vw 2.60vw 0.83vw 2.60vw;
+  padding: 0.83vw 2.6vw 0.83vw 2.6vw;
   font-weight: 400;
   font-size: 1.04vw;
   color: #fff;
@@ -77,25 +86,6 @@ export default {
 .total {
   display: flex;
   justify-content: flex-end;
-}
-.product__overflow::-webkit-scrollbar {
-  background: #2C6DF5;
-  border-radius: 0.78vw;
-  width: 0.47vw;
-}
-.product__overflow::-webkit-scrollbar-thumb {
-  border-radius: 0.78vw;
-  background-color: #2C6DF5;
-}
-.product__overflow::-webkit-scrollbar-track {
-  -webkit-box-shadow: inset 0 0 6px #2C6DF5;
-  border-radius: 0.78vw;
-  background-color: #181820;
-}
-.product__overflow {
-  height: 44.27vw;
-  overflow-x: hidden;
-  overflow-y: scroll;
 }
 .product__close {
   top: 0;
@@ -152,10 +142,13 @@ export default {
   padding-bottom: 4vw;
 }
 .cart__page {
-  padding-top: 8.54vw;
+  padding-top: 4.54vw;
   margin-bottom: 6.41vw;
 }
 .cart__pagecontent {
+  border: 1px solid rgba(234, 196, 139, 0.5);
+  box-sizing: border-box;
+  border-radius: 5px;
   border-radius: 0.78vw;
 }
 .pl__pr {

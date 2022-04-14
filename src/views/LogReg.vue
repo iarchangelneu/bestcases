@@ -31,11 +31,10 @@ export default {};
   min-width: 31.82vw;
 }
 .modal-content {
-  background: #141721;
-  border: 1px solid #246BFF;
+  background: #1a1814;
+  border: 1px solid rgba(234, 196, 139, 0.5);
   box-sizing: border-box;
-  box-shadow: 0px 0px 10px #2C6DF5;
-  border-radius: 0  !important;
+  border-radius: 5px;
 }
 .modal-header,
 .modal-footer {

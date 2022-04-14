@@ -142,11 +142,10 @@ export default {
 
 <style scpoed>
 .modal-contents2 {
-  background: #141721;
-  border: 1px solid #6934FF !important;
+  background: #1a1814;
+  border: 1px solid rgba(234, 196, 139, 0.5);
   box-sizing: border-box;
-  box-shadow: 0px 0px 10px #6934FF !important;
-  border-radius: 0 !important;
+  border-radius: 5px;
   position: relative;
   display: flex;
   flex-direction: column;
@@ -162,15 +161,15 @@ export default {
   align-items: flex-start;
 }
 .warning__text {
-  font-family: 'Roboto';
+  font-family: "Roboto";
   font-weight: 400;
   font-size: 0.83vw;
   color: #fff;
 }
 .money__complete {
   display: flex;
-  padding-left: 3.4vw;
-  padding-bottom: 1.44vw;
+  flex-direction: column;
+  align-items: center;
 }
 .mt {
   margin-top: 2.5vw;
@@ -205,16 +204,14 @@ input[type="checkbox"] {
 .system__type {
   display: flex;
   margin-top: 2.08vw;
-  
 }
 .money__active {
-  background: #2c6df5 !important;
+  background: #eac48b !important;
   border-radius: 5px;
   text-align: center;
-  padding: 0.63vw 3.02vw 0.63vw 3.02vw;
 }
 .money__btn {
-  z-index:4;
+  z-index: 4;
   display: flex;
   font-weight: 400;
   font-size: 1.04vw;
@@ -225,17 +222,10 @@ input[type="checkbox"] {
   background: transparent;
   align-items: center;
   color: #fff;
-  padding: 0.63vw 3.02vw 0.63vw 3.02vw;
+  padding: 0.63vw 1.02vw 0.63vw 1.02vw;
 }
 .modal-dialog {
-  min-width: 31.93vw;
-}
-.modal-content {
-  background: #141721;
-  border: 1px solid #246bff;
-  box-sizing: border-box;
-  box-shadow: 0px 0px 10px #2c6df5;
-  border-radius: 0 !important;
+  min-width: 41.67vw;
 }
 .modal-header,
 .modal-footer {
