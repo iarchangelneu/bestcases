@@ -1,11 +1,10 @@
 <template>
   <a name="FAQ"></a>
+  <div class="faq__text">
+        <img src="@/assets/img/faq.png" style="width:30.26vw" alt="">
+      </div>
   <div class="faq">
     <div class="faq__bg pl__pr">
-      <div class="faq__text">
-        <img src="@/assets/img/question.svg" style="width: 2.08vw" alt="" />
-        <p class="faq__main">Часто задаваемые вопросы</p>
-      </div>
       <div class="faq__flex row">
         <div class="accordion col" id="accordionExample">
           <div class="card">
@@ -20,10 +19,8 @@
                     aria-expanded="true"
                     aria-controls="collapse0"
                     id="faqBtn0"
-                    
                   >
-                    Что делать, если после пополнения баланса деньги не<br />
-                    поступили на счет?
+                    Что делать, если после пополнения баланса деньги не поступили на счет?
                   </button>
                 </h2>
                 <div class="p" id="faqPlus0">+</div>
@@ -37,8 +34,7 @@
               data-parent="#accordionExample"
             >
               <div class="card-body">
-                Нажми на иконку в правом верхнем углу экрана (там, где<br />
-                находится твой ник). Возвращайся скорее!
+               Нажми на иконку в правом верхнем углу экрана (там, где находится твой ник). Возвращайся скорее!
               </div>
             </div>
           </div>
@@ -54,7 +50,6 @@
                     aria-expanded="true"
                     aria-controls="collapse1"
                     id="faqBtn1"
-                    
                   >
                     Как выйти из своего профиля?
                   </button>
@@ -69,8 +64,7 @@
               data-parent="#accordionExample"
             >
               <div class="card-body">
-                Нажми на иконку в правом верхнем углу экрана (там, где<br />
-                находится твой ник). Возвращайся скорее!
+                Нажми на иконку в правом верхнем углу экрана (там, где находится твой ник). Возвращайся скорее!
               </div>
             </div>
           </div>
@@ -86,10 +80,8 @@
                     aria-expanded="true"
                     aria-controls="collapse2"
                     id="faqBtn2"
-                    
                   >
-                    У меня есть деньги на Steam аккаунте - почему они тут не
-                    отображаются?
+                    У меня есть деньги на Steam аккаунте - почему они тут не отображаются?
                   </button>
                 </h2>
                 <div class="p" id="faqPlus2">+</div>
@@ -102,8 +94,7 @@
               data-parent="#accordionExample"
             >
               <div class="card-body">
-                Нажми на иконку в правом верхнем углу экрана (там, где<br />
-                находится твой ник). Возвращайся скорее!
+                Нажми на иконку в правом верхнем углу экрана (там, где находится твой ник). Возвращайся скорее!
               </div>
             </div>
           </div>
@@ -119,10 +110,8 @@
                     aria-expanded="true"
                     aria-controls="collapse3"
                     id="faqBtn3"
-                    
                   >
-                    Что делать, если предмет не пришел или вы<br />
-                    не можете его забрать?
+                    Что делать, если предмет не пришел или вы не можете его забрать?
                   </button>
                 </h2>
                 <div class="p" id="faqPlus3">+</div>
@@ -135,142 +124,7 @@
               data-parent="#accordionExample"
             >
               <div class="card-body">
-                Нажми на иконку в правом верхнем углу экрана (там, где<br />
-                находится твой ник). Возвращайся скорее!
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="accordion col" id="accordion2">
-          <div class="card">
-            <div class="card-header" id="headingFive">
-              <div class="coll__flex">
-                <h2 class="mb-0">
-                  <button
-                    class="btn btn-link btn-block text-left"
-                    type="button"
-                    data-toggle="collapse"
-                    data-target="#collapse4"
-                    aria-expanded="true"
-                    aria-controls="collapse4"
-                    id="faqBtn4"
-                    
-                  >
-                    Что делать, если после пополнения баланса деньги не<br />
-                    поступили на счет?
-                  </button>
-                </h2>
-                <div class="p" id="faqPlus4">+</div>
-              </div>
-            </div>
-
-            <div
-              id="collapse4"
-              class="collapse"
-              aria-labelledby="headingFive"
-              data-parent="#accordion2"
-            >
-              <div class="card-body">
-                Нажми на иконку в правом верхнем углу экрана (там, где<br />
-                находится твой ник). Возвращайся скорее!
-              </div>
-            </div>
-          </div>
-          <div class="card">
-            <div class="card-header" id="headingSix">
-              <div class="coll__flex">
-                <h2 class="mb-0">
-                  <button
-                    class="btn btn-link btn-block text-left"
-                    type="button"
-                    data-toggle="collapse"
-                    data-target="#collapse5"
-                    aria-expanded="true"
-                    aria-controls="collapse5"
-                    id="faqBtn5"
-                    
-                  >
-                    Как выйти из своего профиля?
-                  </button>
-                </h2>
-                <div class="p" id="faqPlus5">+</div>
-              </div>
-            </div>
-            <div
-              id="collapse5"
-              class="collapse"
-              aria-labelledby="headingSix"
-              data-parent="#accordion2"
-            >
-              <div class="card-body">
-                Нажми на иконку в правом верхнем углу экрана (там, где<br />
-                находится твой ник). Возвращайся скорее!
-              </div>
-            </div>
-          </div>
-          <div class="card">
-            <div class="card-header" id="headingSeven">
-              <div class="coll__flex">
-                <h2 class="mb-0">
-                  <button
-                    class="btn btn-link btn-block text-left"
-                    type="button"
-                    data-toggle="collapse"
-                    data-target="#collapse6"
-                    aria-expanded="true"
-                    aria-controls="collapse6"
-                    id="faqBtn6"
-                    
-                  >
-                    У меня есть деньги на Steam аккаунте - почему они тут<br />
-                    не отображаются?
-                  </button>
-                </h2>
-                <div class="p" id="faqPlus6">+</div>
-              </div>
-            </div>
-            <div
-              id="collapse6"
-              class="collapse"
-              aria-labelledby="headingSeven"
-              data-parent="#accordion2"
-            >
-              <div class="card-body">
-                Нажми на иконку в правом верхнем углу экрана (там, где<br />
-                находится твой ник). Возвращайся скорее!
-              </div>
-            </div>
-          </div>
-          <div class="card">
-            <div class="card-header" id="headingEight">
-              <div class="coll__flex">
-                <h2 class="mb-0">
-                  <button
-                    class="btn btn-link btn-block text-left"
-                    type="button"
-                    data-toggle="collapse"
-                    data-target="#collapse7"
-                    aria-expanded="true"
-                    aria-controls="collapse7"
-                    id="faqBtn7"
-                    
-                  >
-                    Что делать, если предмет не пришел или вы<br>
-                     не можете его забрать?
-                  </button>
-                </h2>
-                <div class="p" id="faqPlus7">+</div>
-              </div>
-            </div>
-            <div
-              id="collapse7"
-              class="collapse"
-              aria-labelledby="headingEight"
-              data-parent="#accordion2"
-            >
-              <div class="card-body">
-                Нажми на иконку в правом верхнем углу экрана (там, где<br />
-                находится твой ник). Возвращайся скорее!
+                Нажми на иконку в правом верхнем углу экрана (там, где находится твой ник). Возвращайся скорее!
               </div>
             </div>
           </div>
@@ -293,28 +147,28 @@ export default {
       } else {
         faqPlus[0].innerHTML = "+";
       }
-    }, 
-  },
-  mounted(){
-      for(let i=0; i < 8; i++){
-        $(`#collapse${i}`).on('show.bs.collapse', function () {
-          document.querySelector(`#faqPlus${i}`).innerHTML = "-";
-        })
-        $(`#collapse${i}`).on('hide.bs.collapse', function () {
-          document.querySelector(`#faqPlus${i}`).innerHTML = "+";
-        })
-          document.querySelector(`#faqPlus${i}`).onclick = () => {
-            $(`#collapse${i}`).collapse('toggle')
-          }
-      }
     },
+  },
+  mounted() {
+    for (let i = 0; i < 8; i++) {
+      $(`#collapse${i}`).on("show.bs.collapse", function () {
+        document.querySelector(`#faqPlus${i}`).innerHTML = "-";
+      });
+      $(`#collapse${i}`).on("hide.bs.collapse", function () {
+        document.querySelector(`#faqPlus${i}`).innerHTML = "+";
+      });
+      document.querySelector(`#faqPlus${i}`).onclick = () => {
+        $(`#collapse${i}`).collapse("toggle");
+      };
+    }
+  },
 };
 </script>
 
 <style scoped>
 .card-body {
   font-family: "Roboto";
-  background: #060810 !important;
+  background: #1A1814 !important;
   color: #fff;
   font-weight: 400;
   font-size: 1.25vw;
@@ -325,6 +179,7 @@ export default {
   align-items: center;
 }
 .btn-link {
+  outline: none;
   font-family: "Roboto";
   color: #fff;
   font-weight: 400;
@@ -334,29 +189,30 @@ export default {
   width: 5.21vw;
   font-size: 2.34vw;
   color: #fff;
-  background: #2c6df5;
-  border-radius: 0px 5px 5px 0px;
-  padding: 1.77vw 1.77vw 1.77vw 1.77vw;
+  background: #eac48b;
+  padding: 0 1.77vw 0 1.77vw;
   cursor: pointer;
 }
 .card-header {
-  background: rgb(16 32 68);
+  background: #141416;
   box-sizing: border-box;
   border-radius: 6px;
   padding: 0;
 }
 .card {
-  border: 1px solid #2c6df5 !important;
+  box-sizing: border-box;
+  border-radius: 5px;
+  border: 1px solid #eac48b !important;
   margin-bottom: 1.25vw;
 }
 .faq__flex {
   display: flex;
 }
 .faq__text {
-  margin-top: 9.38vw;
+  margin-top: 13.13vw;
   margin-bottom: 2.92vw;
   display: flex;
-  align-items: baseline;
+  justify-content: center;
 }
 .faq__answer {
   font-weight: 400;
@@ -423,16 +279,17 @@ details {
   outline: 0;
 }
 @media screen and (max-width: 480px) {
-  .p{
+  .p {
     height: 13vw;
     border-radius: 0;
     padding: 4.77vw 1.77vw 1.77vw 1.77vw;
   }
-  .btn-link,.card-body{
+  .btn-link,
+  .card-body {
     font-size: 2vw;
   }
-  .faq__text img{
-    width:4.06vw !important;
+  .faq__text img {
+    width: 4.06vw !important;
   }
   .faq__main {
     font-size: 2.55vw;

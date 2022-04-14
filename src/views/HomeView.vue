@@ -3,131 +3,163 @@
     <div class="inner">
       <div class="stock__images row">
         <div class="stock__left col">
-          <p class="stock__main">Обменивай лучшие скины</p>
+          <p class="stock__main">
+            Участвуй в акциях<br />
+            на нашем сайте
+          </p>
           <p class="stock__sec">
-            CS-MARKET.KZ - это грамотное управление<br />
-            вашими кейсами в Steam. В нашем магазине<br />
-            действуют постоянные скидки.
+            BEST CASES это лучшие кейсы с большими<br />
+            скидками по всему СНГ
           </p>
           <div class="stock__buttons">
-            <button class="stock__btnleft">Перейти в магазин</button>
-            <button class="stock__btnright">Посмотреть кейсы</button>
+            <button class="stock__btnright">Перейти к кейсам</button>
           </div>
         </div>
+        <img
+          src="@/assets/img/scroll.svg"
+          style="width: 1.41vw; margin-top: 28vw"
+          alt=""
+        />
         <div class="stock__right col">
-          <img
+          <!-- <img
             src="@/assets/img/bgstock.png"
             alt=""
             style="width: 47.66vw"
             class="stock__bg"
-          />
+          /> -->
         </div>
       </div>
     </div>
+  </div>
+  <div class="whywe">
+    <div class="whywe__title">
+      <img src="@/assets/img/whywe.svg" style="width: 18.75vw" alt="" />
+    </div>
+    <div class="whywe__content">
+      <div class="whywe__items">
+        <img src="@/assets/img/target.png" style="width: 13.23vw" alt="" />
+        <p class="whywe__items__title">Частые выигрыши</p>
+        <p class="whywe__items__desc">
+          BestCases предлагает вам<br />
+          частые и ежедневные<br />
+          выигрыши
+        </p>
+      </div>
+      <div class="whywe__items">
+        <img src="@/assets/img/bank.png" style="width: 11.56vw" alt="" />
+        <p class="whywe__items__title">Уникальные кейсы</p>
+        <p class="whywe__items__desc">
+          Цены на нашем сайте одни из<br />
+          самых выгодных среди<br />
+          аналогичных сайтов
+        </p>
+      </div>
+      <div class="whywe__items">
+        <img src="@/assets/img/sherif.png" style="width: 10.21vw" alt="" />
+        <p class="whywe__items__title">Уникальные кейсы</p>
+        <p class="whywe__items__desc">
+          Огромное количество кейсов,<br />
+          оружия и прочего снаряжения<br />
+          по лучшей цене
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="cases__sales">
+    <img src="@/assets/img/sales.svg" style="width: 18.75vw" alt="" />
   </div>
   <div class="container-fluid">
     <div class="cases">
       <div class="cases__content">
-        <div class="cases__main">
-          <div class="cases__sales">
-            <img src="@/assets/img/flash.svg" alt="" style="width:2.08vw"/>
-            <p class="cases__sales__text">Акции и скидки</p>
-          </div>
-          <a href="/cases" class="cases__href">Посмотреть все кейсы</a>
-        </div>
         <div class="cases__cases">
           <div class="case__content">
-            <p class="case__frame">-10%</p>
-
-            <img src="@/assets/img/magic.png" class="case1" alt="" style="width: 20.83vw" />
+            <img
+              src="@/assets/img/magic.png"
+              class="case1"
+              alt=""
+              style="width: 20.83vw"
+            />
             <p class="case__desc">Магический кейс</p>
-            <button class="case__btn">9 000 ₸</button>
+            <button class="case__btn">Купить за 9 900 ₸</button>
           </div>
           <div class="case__content">
-            <p class="case__frame">NEW</p>
-
-            <img src="@/assets/img/toxic.png" class="case2" alt="" style="width: 21.98vw" />
+            <img
+              src="@/assets/img/toxic.png"
+              class="case2"
+              alt=""
+              style="width: 21.98vw"
+            />
             <p class="case__desc mtc">Кислотный кейс</p>
-            <button class="case__btn">8 590 ₸</button>
+            <button class="case__btn">Купить за 11 900 ₸</button>
           </div>
           <div class="case__content">
-            <p class="case__frame">-5%</p>
-
-            <img src="@/assets/img/ice.png" class="case3" alt="" style="width: 21.09vw" />
+            <img
+              src="@/assets/img/ice.png"
+              class="case3"
+              alt=""
+              style="width: 21.09vw"
+            />
             <p class="case__desc">Ледяной кейс</p>
-            <button class="case__btn">10 290 ₸</button>
+            <button class="case__btn">Купить за 5 490 ₸</button>
           </div>
           <div class="case__content">
-            <p class="case__frame">-10%</p>
-
-            <img src="@/assets/img/gold.png" class="case4" alt="" style="width: 19.79vw" />
+            <img
+              src="@/assets/img/gold.png"
+              class="case4"
+              alt=""
+              style="width: 19.79vw"
+            />
             <p class="case__desc mtc">Золотой кейс</p>
-            <button class="case__btn">7 777 ₸</button>
+            <button class="case__btn">Купить за 11 200 ₸</button>
+          </div>
+        </div>
+        <div class="cases__cases2">
+          <div class="case__content2">
+            <img
+              src="@/assets/img/lucky.png"
+              class="case1"
+              alt=""
+              style="width: 16.77vw"
+            />
+            <p class="case__desc">Магический кейс</p>
+            <button class="case__btn">Купить за 9 900 ₸</button>
+          </div>
+          <div class="case__content2">
+            <img
+              src="@/assets/img/lifestyle.png"
+              class="case2"
+              alt=""
+              style="width: 17.97vw"
+            />
+            <p class="case__desc mtc">Кислотный кейс</p>
+            <button class="case__btn">Купить за 11 900 ₸</button>
+          </div>
+          <div class="case__content2">
+            <img
+              src="@/assets/img/danger.png"
+              class="case3"
+              alt=""
+              style="width: 15.21vw"
+            />
+            <p class="case__desc">Ледяной кейс</p>
+            <button class="case__btn" style="margin-top: 1.8vw">
+              Купить за 5 490 ₸
+            </button>
           </div>
         </div>
       </div>
     </div>
   </div>
-  <div class="popular__items">
-    <div class="popular__cases">
-      <div class="popular__text__content">
-        <img src="@/assets/img/star.svg" alt="" style="width: 2.08vw" />
-        <p class="popular__text">Популярные кейсы</p>
-      </div>
-      <div class="popular__cases__content">
-        <div class="popular__cases__item">
-          <img src="@/assets/img/gamma.png" alt="" style="width: 16.93vw" />
-          <p class="cases__item__desc">Кейс “Gamma”</p>
-          <button class="cases__item__btn">4 500 ₸</button>
-        </div>
-        <div class="popular__cases__item">
-          <img src="@/assets/img/rest.png" alt="" style="width: 16.93vw" />
-          <p class="cases__item__desc">Кейс “Restricted”</p>
-          <button class="cases__item__btn">6 500 ₸</button>
-        </div>
-        <div class="popular__cases__item">
-          <img
-            src="@/assets/img/inferno.png"
-            alt=""
-            style="width: 13.44vw; margin-left: 2.97vw; padding-top: 3.65vw"
-          />
-          <p class="cases__item__desc shit">Кейс “Inferno”</p>
-          <button class="cases__item__btn">4 800 ₸</button>
-        </div>
-        <div class="popular__cases__item">
-          <img
-            src="@/assets/img/bravo.png"
-            alt=""
-            style="
-              width: 13.44vw;
-              margin-left: 4.58vw;
-              margin-right: 2.86vw;
-              padding-top: 3.65vw;
-            "
-          />
-          <p class="cases__item__desc shit">Кейс “Bravo”</p>
-          <button class="cases__item__btn">7 990 ₸</button>
-        </div>
-        <div class="popular__cases__item">
-          <img src="@/assets/img/night.png" alt="" style="width: 16.93vw" />
-          <p class="cases__item__desc">Кейс “Nightmare”</p>
-          <button class="cases__item__btn">6 660 ₸</button>
-        </div>
-      </div>
-    </div>
+  <div class="popular__text__content">
+    <img src="@/assets/img/popular__items.png" style="width: 24.38vw" alt="" />
   </div>
   <div class="popular__items">
-    <div class="popular__weapons">
-      <div class="popular__text__content">
-        <img src="@/assets/img/knife.svg" alt="" style="width: 2.08vw" />
-        <p class="popular__text">Популярные предметы</p>
-      </div>
-    </div>
+    <div class="popular__weapons"></div>
     <div class="item__weapons__blocks">
       <div class="item__block">
         <div class="item__block__content">
           <img src="@/assets/img/brain.png" alt="" style="width: 13.02vw" />
-          <p class="weapon__name" style="margin-top:1.3vw">USP-S</p>
+          <p class="weapon__name" style="margin-top: 1.3vw">USP-S</p>
           <div class="weapon__price__content">
             <p class="weapon__from">от</p>
             <p class="weapon__price">9 000 ₸</p>
@@ -137,7 +169,7 @@
       <div class="item__block">
         <div class="item__block__content">
           <img src="@/assets/img/m4a4.png" alt="" style="width: 13.02vw" />
-          <p class="weapon__name" style="margin-top:1.6vw">M4A4</p>
+          <p class="weapon__name" style="margin-top: 1.6vw">M4A4</p>
           <div class="weapon__price__content">
             <p class="weapon__from">от</p>
             <p class="weapon__price">13 590 ₸</p>
@@ -146,7 +178,11 @@
       </div>
       <div class="item__block">
         <div class="item__block__content">
-          <img src="@/assets/img/web.png" alt="" style="width: 13.02vw;margin-top:-1.46vw" />
+          <img
+            src="@/assets/img/web.png"
+            alt=""
+            style="width: 13.02vw; margin-top: -1.46vw"
+          />
           <p class="weapon__name">Karambit Crimson Web</p>
           <div class="weapon__price__content">
             <p class="weapon__from">от</p>
@@ -157,7 +193,7 @@
       <div class="item__block">
         <div class="item__block__content">
           <img src="@/assets/img/flame.png" alt="" style="width: 13.02vw" />
-          <p class="weapon__name" style="margin-top:1.6vw">Desert Eagle</p>
+          <p class="weapon__name" style="margin-top: 1.6vw">Desert Eagle</p>
           <div class="weapon__price__content">
             <p class="weapon__from">от</p>
             <p class="weapon__price">81 590 ₸</p>
@@ -167,10 +203,40 @@
       <div class="item__block">
         <div class="item__block__content">
           <img src="@/assets/img/butterfly.png" alt="" style="width: 13.02vw" />
-          <p class="weapon__name">Butterfly Knife Doppler </p>
+          <p class="weapon__name">Butterfly Knife Doppler</p>
           <div class="weapon__price__content">
             <p class="weapon__from">от</p>
             <p class="weapon__price">13 109 $</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="stats__block">
+    <div class="stats__img">
+      <img src="@/assets/img/stats.png" style="width: 86.15vw" alt="" />
+    </div>
+    <div class="stats">
+      <div class="stats__content">
+        <p class="stats__title">Статистика</p>
+        <div class="stats__block">
+          <div style="margin-right: 4.17vw">
+            <p class="stats__count">{{currentlyOpened}}</p>
+            <p class="stats__name">Открытых кейсов</p>
+          </div>
+          <div>
+            <p class="stats__count">{{usersAll}}</p>
+            <p class="stats__name">Всего пользователей</p>
+          </div>
+        </div>
+        <div class="stats__block">
+          <div style="margin-right: 6.17vw">
+            <p class="stats__count">{{usersOnline}}</p>
+            <p class="stats__name">Онлайн сейчас</p>
+          </div>
+          <div>
+            <p class="stats__count">{{contracts}}</p>
+            <p class="stats__name">Контрактов</p>
           </div>
         </div>
       </div>
@@ -181,17 +247,125 @@
 
 <script>
 export default {
-  methods: {},
-  mounted() {},
+  computed: {
+    contracts(){
+      let curDate = new Date();
+      return (
+        20000 +
+        Math.floor(
+          (Date.parse(curDate) - Date.parse("2022-04-03T13:51:50.417-07:00")) /
+            60 /
+            60 /
+            24
+        )
+      );
+    },
+    currentlyOpened() {
+      let curDate = new Date();
+      return (
+        500000 +
+        Math.floor(
+          (Date.parse(curDate) - Date.parse("2022-04-03T13:51:50.417-07:00")) /
+            60 /
+            60 /
+            24
+        )
+      );
+    },
+    usersAll() {
+      let curDate = new Date();
+      return (
+        120000 +
+        Math.floor(
+          (Date.parse(curDate) - Date.parse("2022-04-03T13:51:50.417-07:00")) /
+            60 /
+            60 /
+            24
+        )
+      );
+    },
+    usersOnline() {
+      let curDate = new Date();
+      return Math.floor(7000 + Math.random() * (2000 - 1) + 1);
+    },
+  },
 };
 </script>
 
 <style scoped>
-.mtc{
+.stats__img {
+  margin-top: 9.9vw;
+  margin-left: 6.08vw;
+}
+.stats__block {
+  position: relative;
+}
+.stats__name {
+  font-family: "Roboto";
+  font-weight: 400;
+  color: #eac48b;
+  font-size: 1.25vw;
+}
+.stats__count {
+  font-family: "Allerta Stencil";
+  font-weight: 400;
+  font-size: 3.13vw;
+  color: #fff;
+}
+.stats__title {
+  font-size: 2.6vw;
+  font-weight: 700;
+  color: #eac48b;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+.stats__block {
+  display: flex;
+}
+.stats {
+  top: 13.02vw;
+  right: 23.44vw;
+  position: absolute;
+  display: flex;
+  justify-content: flex-end;
+}
+.case__content2 {
+  margin-right: 5vw;
+}
+.whywe__items img {
+  margin-left: 3.2vw;
+}
+.whywe__items__title {
+  margin-top: 1.46vw;
+  font-size: 1.67vw;
+  font-weight: 700;
+  text-align: center;
+  color: #fff;
+}
+.whywe__items__desc {
+  font-size: 1.04vw;
+  font-weight: 500;
+  text-align: center;
+  color: #fff;
+}
+.whywe__content {
+  padding-left: 13.02vw;
+  padding-right: 13.02vw;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 5.21vw;
+}
+.whywe {
+  margin-top: 7.81vw;
+}
+.whywe__title {
+  display: flex;
+  justify-content: center;
+}
+.mtc {
   margin-top: 1.5rem;
 }
-.weapon__price{
-   font-weight: 400;
+.weapon__price {
+  font-weight: 400;
   font-size: 1.04vw;
 }
 .weapon__from {
@@ -201,32 +375,36 @@ export default {
   color: rgba(255, 255, 255, 0.3);
 }
 .weapon__name {
+  font-family: "Montserrat";
   font-weight: 900;
-  font-size: 1.25vw;
+  font-size: 1.15vw;
 }
 .weapon__price__content {
   display: flex;
 }
-.item__block__content:hover{
-background: radial-gradient(82.21% 62.79% at 50% 50%, #3F7AF5 0%, #03266F 100%) 
+.item__block__content:hover {
+  background: rgba(241, 90, 36, 0.4);
+  border: 1px solid #f15a24;
 }
 .item__block__content {
+  border: 1px solid #6d6d6d;
+  box-sizing: border-box;
+  border-radius: 5px;
   cursor: pointer;
-  width:17.45vw;
+  width: 17.45vw;
   height: 20.36vw;
   color: #fff;
-  padding-top: 2.60vw;
-  padding-left: 2.19vw;
-  padding-right: 2.24vw;
+  padding-top: 2.6vw;
+  padding-left: 1.25vw;
   background: radial-gradient(
     82.39% 82.39% at 50% 50%,
-    #1e1d21 0%,
-    #3c3b3f 100%
+    rgba(30, 29, 33, 0.4) 0%,
+    rgba(60, 59, 63, 0.4) 100%
   );
 }
 .item__weapons__blocks {
   display: flex;
-  justify-content: space-between
+  justify-content: space-between;
 }
 .shit {
   margin-top: 2.6vw;
@@ -241,7 +419,7 @@ background: radial-gradient(82.21% 62.79% at 50% 50%, #3F7AF5 0%, #03266F 100%)
   border: 0;
   font-weight: 400;
   font-size: 1.25vw;
-  padding: 0.63vw 2.60vw 0.63vw 2.60vw;
+  padding: 0.63vw 2.6vw 0.63vw 2.6vw;
 }
 .cases__item__desc {
   font-weight: 400;
@@ -259,8 +437,9 @@ background: radial-gradient(82.21% 62.79% at 50% 50%, #3F7AF5 0%, #03266F 100%)
   color: #fff;
 }
 .popular__text__content {
+  margin-top: 8.85vw;
   display: flex;
-  align-items: baseline;
+  justify-content: center;
 }
 .popular__items {
   padding-top: 7.81vw;
@@ -268,14 +447,19 @@ background: radial-gradient(82.21% 62.79% at 50% 50%, #3F7AF5 0%, #03266F 100%)
   padding-right: 5.21vw;
 }
 .case__btn {
-  background: #2c6df5;
+  font-family: "Roboto";
+  background: rgba(241, 90, 36, 0.4);
+  border: 1px solid #f15a24;
+  box-sizing: border-box;
   border-radius: 5px;
   color: #fff;
-  padding: 0.63vw 2.60vw 0.63vw 2.60vw;
-  border: 0;
+  padding: 0.94vw 3.02vw 0.94vw 3.02vw;
   font-weight: 400;
-  font-size: 1.25vw;
+  font-size: 1.04vw;
+  margin-top: 2.08vw;
   margin-bottom: 3.13vw;
+  -webkit-clip-path: polygon(0 10%, 100% 0, 100% -90%, 0 100%);
+  clip-path: polygon(10% 0, 0 100%, 90% 100%, 100% 0);
 }
 .case__desc {
   font-weight: 400;
@@ -299,6 +483,12 @@ background: radial-gradient(82.21% 62.79% at 50% 50%, #3F7AF5 0%, #03266F 100%)
   text-align: center;
   display: flex;
 }
+.cases__cases2 {
+  padding-left: 1.04vw;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+}
 .cases__href {
   color: #fff;
   font-weight: 400;
@@ -317,28 +507,33 @@ background: radial-gradient(82.21% 62.79% at 50% 50%, #3F7AF5 0%, #03266F 100%)
   color: #fff;
 }
 .cases__sales {
+  margin-top: 8.85vw;
   display: flex;
-  align-items: baseline;
+  justify-content: center;
 }
 .stock__buttons {
-  margin-left: -14.79vw;
+  padding-bottom: 6vw;
+  margin-left: -26.79vw;
 }
 .stock__btnleft {
   background: #2c6df5;
   border-radius: 5px;
   border: 0;
-  padding: 1.25vw 2.60vw 1.25vw 2.60vw;
+  padding: 1.25vw 2.6vw 1.25vw 2.6vw;
   font-size: 1.04vw;
   color: #fff;
   margin-right: 1.25vw;
 }
 .stock__btnright {
-  background: rgba(44, 109, 245, 0.2);
-  border: 1px solid #2c6df5;
+  background: rgba(241, 90, 36, 0.4);
+  border: 1px solid #f15a24;
+  box-sizing: border-box;
   border-radius: 5px;
-  padding: 1.25vw 2.60vw 1.25vw 2.60vw;
+  padding: 1.09vw 4.58vw 1.09vw 4.58vw;
   font-size: 1.04vw;
   color: #fff;
+  -webkit-clip-path: polygon(0 10%, 100% 0, 100% -90%, 0 100%);
+  clip-path: polygon(10% 0, 0 100%, 90% 100%, 100% 0);
 }
 .stock__main {
   text-align: left;
@@ -472,7 +667,7 @@ background: radial-gradient(82.21% 62.79% at 50% 50%, #3F7AF5 0%, #03266F 100%)
   text-align: center;
 }
 .cases {
-  margin-top: 5.63vw;
+  margin-top: 4.17vw;
   padding-left: 5.21vw;
   padding-right: 5.21vw;
   position: relative;
@@ -480,10 +675,6 @@ background: radial-gradient(82.21% 62.79% at 50% 50%, #3F7AF5 0%, #03266F 100%)
 
 .cases__content {
   position: relative;
-  background: url("@/assets/img/act.png");
-  background-size: 89.58vw;
-  border-radius: 20px;
-  padding-top: 2.6vw;
   /* padding-top: 12.19vw; */
 }
 .stock__text {
@@ -501,71 +692,76 @@ hr {
 }
 
 @media screen and (max-width: 480px) {
-  .item__block__content{
+  .item__block__content {
     height: 31.36vw;
   }
-  .weapon__price, .weapon__from{
+  .weapon__price,
+  .weapon__from {
     font-size: 1.75vw;
   }
-  .cases__item__desc, .cases__item__btn, .weapon__name{
+  .cases__item__desc,
+  .cases__item__btn,
+  .weapon__name {
     font-size: 2vw;
   }
-  .popular__text{
+  .popular__text {
     font-size: 2.55vw;
   }
-  .popular__text__content img{
+  .popular__text__content img {
     width: 4vw !important;
   }
-  .case__btn{
+  .case__btn {
     font-size: 2vw;
   }
-  .case4{
+  .case4 {
     margin-bottom: -1vw;
   }
-  .mtc{
-    margin-top:1.2vw;
+  .mtc {
+    margin-top: 1.2vw;
   }
-  .case__desc{
+  .case__desc {
     font-size: 2vw;
   }
-  .case1, .case2, .case3, .case4{
+  .case1,
+  .case2,
+  .case3,
+  .case4 {
     width: 19.67vw !important;
   }
-  .case__frame{
+  .case__frame {
     font-size: 2vw;
     margin-left: 10.44vw;
     width: 7.210000000000001vw;
   }
-  .cases__content{
+  .cases__content {
     background-size: 150.58vw;
   }
-  .cases__href{
+  .cases__href {
     margin-top: 2.2vw;
     font-size: 2vw;
   }
-  .cases__sales__text{
+  .cases__sales__text {
     font-size: 2.8vw;
   }
-  .cases__sales img{
-    width:4.67vw !important;
+  .cases__sales img {
+    width: 4.67vw !important;
   }
-  .stock__sec{
-    font-family: 'Roboto';
+  .stock__sec {
+    font-family: "Roboto";
     font-size: 1.95vw;
   }
   .stock {
-    height:65.2vw !important;
-    padding-top:10vw;
+    height: 65.2vw !important;
+    padding-top: 10vw;
   }
   .stock__desc,
   .stock__desc2 {
     font-size: 2.67vw;
   }
-  .stock__left{
+  .stock__left {
     margin-top: 4.66vw;
   }
   .inner {
-    
     background-size: 100vw;
   }
   .stock__text {
@@ -575,10 +771,11 @@ hr {
     margin-top: -4vw;
     padding-bottom: 0;
   }
-  .stock__buttons{
+  .stock__buttons {
     margin-left: -0.78vw;
   }
-  .stock__btnleft, .stock__btnright{
+  .stock__btnleft,
+  .stock__btnright {
     font-size: 1.7vw;
   }
   .cases__mainimg {
@@ -612,13 +809,13 @@ hr {
     font-size: 3.5vw;
   }
 }
-@media screen and (max-width: 320px){
-  .inner{
+@media screen and (max-width: 320px) {
+  .inner {
     background-size: 101vw;
     padding-top: 11.6vw;
   }
-  .stock__buttons{
-    margin-left:-1.78vw
+  .stock__buttons {
+    margin-left: -1.78vw;
   }
 }
 </style>

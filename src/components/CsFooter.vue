@@ -1,37 +1,22 @@
 <template>
-  <hr />
   <section class="footer">
     <div class="footer__counts">
-      <div class="footer__numbersCont">
-        <span class="footer__underNum"> Открытых кейсов </span>
-        <span class="footer__number">
-          {{ currentlyOpened }}
-        </span>
-      </div>
-      <div class="footer__numbersCont">
-        <span class="footer__underNum"> Всего пользователей </span>
-        <span class="footer__number">
-          {{ usersAll }}
-        </span>
-      </div>
-      <div class="footer__numbersCont">
-        <span class="footer__underNum"> онлайн сейчас </span>
-        <span class="footer__number">
-          {{ usersOnline }}
-        </span>
-      </div>
+      <img src="@/assets/img/qiwi.svg" style="width: 11.67vw" alt="" />
+      <img src="@/assets/img/visa.svg" style="width: 9.53vw" alt="" />
+      <img src="@/assets/img/master.svg" style="width: 5.94vw" alt="" />
+      <img src="@/assets/img/wm.svg" style="width: 13.91vw" alt="" />
     </div>
-    <hr />
+
     <div class="footer_navigation">
-      <img src="@/assets/img/foterlog.svg" style="width: 10.94vw" alt="" />
+      <img src="@/assets/img/footerlogo.svg" style="width: 7.76vw" alt="" />
       <the-navbar></the-navbar>
       <a href="/PrivacyPolicy" class="privacy">Политика конфиденциальности</a>
       <a href="TermsOfUse" class="privacy">Пользовательское соглашение</a>
+      <button class="steam__footer">Войти через Steam</button>
     </div>
-    <hr />
     <div class="copyright">
-      <p class="copyright__text">© 2018-2022 CS-MARKET</p>
-      <p class="copyright__text">ТОО “CS-Market.kz”, г. Алматы, Аксай 2, 39</p>
+      <p class="copyright__text">© 2018-2022 BestCases</p>
+      <p class="copyright__text">ТОО “BestCases.kz”, г. Алматы, Аксай 2, 39</p>
     </div>
   </section>
 </template>
@@ -75,6 +60,19 @@ export default {
 </script>
 
 <style scoped>
+.steam__footer {
+  padding: 0.94vw 2.6vw 0.94vw 2.6vw;
+  border: 0;
+  color: #fff;
+  font-weight: 400;
+  font-size: 1.04vw;
+  background: rgba(241, 90, 36, 0.4);
+  border: 1px solid #f15a24;
+  box-sizing: border-box;
+  border-radius: 5px;
+  -webkit-clip-path: polygon(0 10%, 100% 0, 100% -90%, 0 100%);
+  clip-path: polygon(10% 0, 0 100%, 90% 100%, 100% 0);
+}
 .copyright__text {
   font-weight: 400;
   font-size: 1.25vw;
@@ -92,7 +90,7 @@ export default {
 .privacy {
   color: #fff;
   font-weight: 400;
-  font-size:0.94vw;
+  font-size: 0.94vw;
 }
 .footer_navigation {
   display: flex;
@@ -104,6 +102,7 @@ export default {
   align-items: center;
 }
 .footer__counts {
+  background: #1a1814;
   padding-top: 2.21vw;
   padding-bottom: 5.21vw;
   padding-left: 15.63vw;
@@ -146,7 +145,7 @@ hr {
 }
 .footer {
   margin-top: 5.2vw;
-  background-color: #060810;
+  background-color: #141416;;
 }
 .ak47 {
   justify-content: center;
@@ -219,13 +218,13 @@ hr {
 }
 
 @media screen and (max-width: 480px) {
-  .copyright__text{
+  .copyright__text {
     font-size: 2vw;
   }
-  .footer_navigation img{
-    width:20vw  !important;
+  .footer_navigation img {
+    width: 20vw !important;
   }
-  .privacy{
+  .privacy {
     font-size: 1.72vw;
     margin-right: 2vw;
   }
