@@ -184,7 +184,7 @@ export default {
     },
   },
   mounted() {
-    for (let i = 0; i < 4; i++) {
+    for (let i = 0; i < 5; i++) {
       $(`#collapse${i}`).on("show.bs.collapse", function () {
         document.querySelector(`#faqPlus${i}`).innerHTML = "-";
       });
