@@ -10,8 +10,8 @@
     <div class="footer_navigation">
       <img src="@/assets/img/footerlogo.svg" style="width: 7.76vw" alt="" />
       <the-navbar></the-navbar>
-      <a href="/PrivacyPolicy" class="privacy">Политика конфиденциальности</a>
-      <a href="TermsOfUse" class="privacy">Пользовательское соглашение</a>
+      <a href="/privacy" class="privacy">Политика конфиденциальности</a>
+      <a href="/terms" class="privacy">Пользовательское соглашение</a>
       <button class="steam__footer">Войти через Steam</button>
     </div>
     <div class="copyright">

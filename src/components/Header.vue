@@ -14,7 +14,6 @@
         </div>
       </div>
       <div class="walletCont">
-        
         <img
           class="walletImg"
           src="../assets/img/walletsvg.svg"
@@ -22,7 +21,7 @@
           style="width: 1.25vw"
         />
         <div class="purse__count">0 ₸</div>
-        <div class="popolnit">+ пополнить</div>
+        <div class="popolnit" @click="topupMoney">+ пополнить</div>
       </div>
       <div class="user">
         <img
@@ -33,7 +32,7 @@
         />
         <div class="dropdown">
           <img
-            src="../assets/img/avatar.svg"
+            src="../assets/img/avatarn.svg"
             alt=""
             style=""
             class="accountHeaderImgM"
@@ -144,13 +143,13 @@ export default {
 </script>
 
 <style scoped>
-.popolnit{
+.popolnit {
   position: absolute;
   bottom: 0.5vw;
   font-size: 0.83vw;
   font-weight: 300;
-  color:#ffff;
-  cursor:pointer;
+  color: #ffff;
+  cursor: pointer;
 }
 .cartCont {
   margin-right: 2.6vw;
@@ -180,8 +179,8 @@ export default {
   margin-left: 16px;
 }
 .walletCont {
-  margin-top:-0.5vw;
-  margin-right:2.76vw;
+  margin-top: -0.5vw;
+  margin-right: 2.76vw;
   display: flex;
   align-items: center;
 }
@@ -249,8 +248,9 @@ export default {
   align-items: center;
 }
 .signin {
-  border: 0;
-  background: #2c6df5;
+  background: rgba(241, 90, 36, 0.4);
+  border: 1px solid #f15a24;
+  box-sizing: border-box;
   border-radius: 5px;
   color: #fff;
   font-weight: 500;
@@ -261,9 +261,10 @@ export default {
 .signin__steam {
   display: flex;
   align-items: center;
-  background: #2c6df5;
+  background: rgba(241, 90, 36, 0.4);
+  border: 1px solid #f15a24;
+  box-sizing: border-box;
   border-radius: 5px;
-  border: 0;
   padding: 0.5vw 1.41vw 0.5vw 1.41vw;
   font-weight: 500;
   /* height: 3.54vw; */
@@ -346,6 +347,7 @@ export default {
     font-size: 2.55vw;
   }
   .walletCont {
+    display: none;
     padding-right: 5vw;
   }
   .walletImg {

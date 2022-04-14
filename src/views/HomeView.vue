@@ -121,8 +121,8 @@
               alt=""
               style="width: 16.77vw"
             />
-            <p class="case__desc">Магический кейс</p>
-            <button class="case__btn">Купить за 9 900 ₸</button>
+            <p class="case__desc">Кейс Удачи</p>
+            <button class="case__btn">Купить за 11 900 ₸</button>
           </div>
           <div class="case__content2">
             <img
@@ -131,8 +131,8 @@
               alt=""
               style="width: 17.97vw"
             />
-            <p class="case__desc mtc">Кислотный кейс</p>
-            <button class="case__btn">Купить за 11 900 ₸</button>
+            <p class="case__desc mtc">Lifestyle кейс</p>
+            <button class="case__btn">Купить за 5 490 ₸</button>
           </div>
           <div class="case__content2">
             <img
@@ -141,9 +141,9 @@
               alt=""
               style="width: 15.21vw"
             />
-            <p class="case__desc">Ледяной кейс</p>
-            <button class="case__btn" style="margin-top: 1.8vw">
-              Купить за 5 490 ₸
+            <p class="case__desc case7t">Danger кейс</p>
+            <button class="case__btn case7" style="margin-top: 1.8vw">
+              Купить за 11 200 ₸
             </button>
           </div>
         </div>
@@ -808,6 +808,24 @@ hr {
   .cases__price {
     font-size: 3.5vw;
   }
+  .whywe__items__title{
+    font-size: 2vw;
+  }
+  .whywe__items__desc{
+    font-size: 1.4vw;
+  }
+  .cases__sales img{
+    width:18vw !important
+  }
+  .case7t{
+        margin-bottom: 1.2vw;
+  }
+  .stats__count, .stats__title{
+    margin-bottom:0;
+  }
+  .stats__name{
+    font-size: 1.5vw;
+  }
 }
 @media screen and (max-width: 320px) {
   .inner {
@@ -816,6 +834,9 @@ hr {
   }
   .stock__buttons {
     margin-left: -1.78vw;
+  }
+  .stock__left{
+    margin-top: -2.34vw;
   }
 }
 </style>

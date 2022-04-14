@@ -20,7 +20,7 @@
                     aria-controls="collapse0"
                     id="faqBtn0"
                   >
-                    Что делать, если после пополнения баланса деньги не поступили на счет?
+                    Что я могу сделать с выигранными скинами?
                   </button>
                 </h2>
                 <div class="p" id="faqPlus0">+</div>
@@ -34,7 +34,7 @@
               data-parent="#accordionExample"
             >
               <div class="card-body">
-               Нажми на иконку в правом верхнем углу экрана (там, где находится твой ник). Возвращайся скорее!
+               Вы можете продать их на нашем сайте или вывести скины к себе в инвентарь steam
               </div>
             </div>
           </div>
@@ -51,7 +51,7 @@
                     aria-controls="collapse1"
                     id="faqBtn1"
                   >
-                    Как выйти из своего профиля?
+                    Когда мне придёт обмен?
                   </button>
                 </h2>
                 <div class="p" id="faqPlus1">+</div>
@@ -64,7 +64,8 @@
               data-parent="#accordionExample"
             >
               <div class="card-body">
-                Нажми на иконку в правом верхнем углу экрана (там, где находится твой ник). Возвращайся скорее!
+                Предметы отправляются практически моментально, независимо от типа предмета<br>
+                 - армейское это качество или тайное, любой предмет будет доставлен за считанные секунды!
               </div>
             </div>
           </div>
@@ -81,7 +82,7 @@
                     aria-controls="collapse2"
                     id="faqBtn2"
                   >
-                    У меня есть деньги на Steam аккаунте - почему они тут не отображаются?
+                     Что будет, если я отклоню обмен от бота?
                   </button>
                 </h2>
                 <div class="p" id="faqPlus2">+</div>
@@ -94,7 +95,9 @@
               data-parent="#accordionExample"
             >
               <div class="card-body">
-                Нажми на иконку в правом верхнем углу экрана (там, где находится твой ник). Возвращайся скорее!
+                Если Вы отклоните обмен, сделаете встречное предложение боту,<br>
+                 либо не примите в течение часа, то Ваш предмет не будет выслан,<br>
+                  не будет продан, а средства не будут возвращены
               </div>
             </div>
           </div>
@@ -111,7 +114,7 @@
                     aria-controls="collapse3"
                     id="faqBtn3"
                   >
-                    Что делать, если предмет не пришел или вы не можете его забрать?
+                     У меня есть деньги в Steam, но сайт их не видит. Почему?
                   </button>
                 </h2>
                 <div class="p" id="faqPlus3">+</div>
@@ -124,7 +127,38 @@
               data-parent="#accordionExample"
             >
               <div class="card-body">
-                Нажми на иконку в правом верхнем углу экрана (там, где находится твой ник). Возвращайся скорее!
+                Деньги на сайт нужно пополнять отдельно. Чтобы пополнить баланс нужно пройти авторизацию,<br>
+                 перейти на страницу пополнения баланса, ввести нужную сумму и нажать кнопку "Пополнить"
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-header" id="headingFive">
+              <div class="coll__flex">
+                <h2 class="mb-0">
+                  <button
+                    class="btn btn-link btn-block text-left"
+                    type="button"
+                    data-toggle="collapse"
+                    data-target="#collapse4"
+                    aria-expanded="true"
+                    aria-controls="collapse4"
+                    id="faqBtn4"
+                  >
+                     Как формируется цена предметов?
+                  </button>
+                </h2>
+                <div class="p" id="faqPlus4">+</div>
+              </div>
+            </div>
+            <div
+              id="collapse4"
+              class="collapse"
+              aria-labelledby="headingFour"
+              data-parent="#accordionExample"
+            >
+              <div class="card-body">
+                Цена на скины формируется автоматически. В расчёт берутся данные разных торговых площадок
               </div>
             </div>
           </div>
@@ -150,7 +184,7 @@ export default {
     },
   },
   mounted() {
-    for (let i = 0; i < 3; i++) {
+    for (let i = 0; i < 4; i++) {
       $(`#collapse${i}`).on("show.bs.collapse", function () {
         document.querySelector(`#faqPlus${i}`).innerHTML = "-";
       });
