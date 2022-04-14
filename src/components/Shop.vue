@@ -2,10 +2,10 @@
     <section class="shop">
 
         <div class="container-fluid cont__pd">
-            <div class="filters__container">
+            
                 <div class="row">
-                <div class="col-md-12 col-12">
-                    <div class="d-flex justify-content-between align-items-end catalog__topfilters">
+                <div class="col-md-3 col-12">
+                    <div class="d-flex catalog__topfilters">
                         <!-- <div class="d-flex align-items-center reloadsort">
                             <img src="@/assets/img/reloadCatalog.png" class="catalog__reloadImg" alt="" @click="reloadCatalog">
                             <img src="@/assets/img/catalogLine.png" class="catalog__lineImg" alt="">
@@ -31,10 +31,10 @@
                         <input type="text" class="catalog__search" placeholder="Поиск по товарам" v-model.trim="search">
 
                         <div class="filtcontm">
-                                <!-- <span class="filters__spans">Редкость</span> -->
+                                <span class="filters__spans">Редкость</span>
                                 <div class="dropdown">
                                     <button class="btn dropdown-toggle dropdown__filters" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                        Редкость
+                                        {{rarityList[rareSelect].rare}}
                                         <img src="@/assets/img/catalogArrowM.png" class="catalog__ArrowImg" alt="">
                                     </button>
                                     <div class="dropdown-menu catalog__dropmenu " aria-labelledby="dropdownMenuButton">
@@ -52,10 +52,10 @@
                             </div>
 
                             <div class="filtcontm">
-                                <!-- <span class="filters__spans">Состояние</span> -->
+                                <span class="filters__spans">Состояние</span>
                                 <div class="dropdown">
                                     <button class="btn dropdown-toggle dropdown__filters" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                        Состояние
+                                        {{conditionList[conditionSelect].cond}}
                                         <img src="@/assets/img/catalogArrowM.png" class="catalog__ArrowImg" alt="">
                                     </button>
                                     <div class="dropdown-menu catalog__dropmenu" aria-labelledby="dropdownMenuButton">
@@ -82,21 +82,16 @@
                             </div>
 
                             <button class="btn filter__button">
-                                Применить
+                                Применить фильтр
                             </button>
                             
                         
                         
                     </div>    
                 </div>
-            </div>
-            </div>
-            
-        </div>
-        
 
-        <div class="container-fluid cont__pd mt-4">
-            <div class="preshop-container">
+                <div class="col-12 col-md-9">
+                    <div class="preshop-container">
                 <div class="shop-container">
                 <div class="row filtersAndCatalog">
                     <div class="col-12 col-md-12 catalog">
@@ -125,9 +120,6 @@
                                         <span class="item__price">
                                             {{Math.floor(item.cost)}} ₸
                                         </span>
-                                        <div class="item__more">
-                                            Подробнее
-                                        </div>
                                     </div>
                                 </div>
                             <!-- </div> -->
@@ -135,11 +127,7 @@
                     </div>
                 </div>
             </div>
-            </div>
-            
-        </div>
-
-        <div class="container-fluid cont__pd mt-4">
+            <div class="col-12 pagination__precont">
             <div class="pagination__cont">
                 <button class="pagination__prev" @click="prevPage">
                     Назад
@@ -151,6 +139,22 @@
                     Вперед
                 </button>
             </div>
+            </div>
+            </div>
+                </div>
+            
+            </div>
+            
+        </div>
+        
+
+        <div class="container-fluid cont__pd mt-4">
+            
+            
+        </div>
+
+        <div class="container-fluid cont__pd mt-4">
+            
         </div>
     </section>   
     <product-modal
@@ -323,7 +327,7 @@ export default {
             console.log(this.rareSelect) 
         },
         nextPage(){
-            if(this.pageNumber < this.filteredWeapons.length/21){
+            if(this.pageNumber < this.filteredWeapons.length/20){
                 this.pageNumber = this.pageNumber + 1;
                 // console.log(this.pageNumber)
             }
@@ -383,9 +387,9 @@ export default {
                 let pageWeapons = [];
                 let ind = 0;
                 if (this.pageNumber > 1){
-                    ind = (this.pageNumber-1)*21
+                    ind = (this.pageNumber-1)*20
                 }
-                for(let i = ind; i <= ind + 20 && i<this.filteredWeapons.length; i++){
+                for(let i = ind; i <= ind + 19 && i<this.filteredWeapons.length; i++){
                     pageWeapons.push(this.filteredWeapons[i])
                 }
                 console.log(pageWeapons)
@@ -393,7 +397,7 @@ export default {
         }
         },
         MaxPages(){
-            return Math.ceil(this.filteredWeapons.length/21);
+            return Math.ceil(this.filteredWeapons.length/20);
         }
     },
     mounted(){
@@ -404,25 +408,33 @@ export default {
 </script>
 
 <style scoped>
+.pagination__precont{
+    background-color: #1A1814;
+    padding: 1.875vw 16px;
+    
+}
 .pagination__cont{
     display: flex;
     justify-content: space-between;
-    background-color: #2B2E37;
+    background-color: #1E1D21;
     align-items: center;
+    border-radius: 5px;
 }
 .pagination__prev{
-    background-color: #2B2E37;
+    background-color: #1E1D21;
     border: 0;
     color: #FFFFFF;
     font-size: 1.250vw;
     padding: 20px;
+    border-right: 1px solid rgba(255, 255, 255, 0.1);
 }
 .pagination__next{
-    background-color: #2B2E37;
+    background-color: #1E1D21;
     border: 0;
     color: #FFFFFF;
     font-size: 1.250vw;
     padding: 20px;
+    border-left: 1px solid rgba(255, 255, 255, 0.1);
 }
 .pagination__numbers{
     color: #FFFFFF;
@@ -438,22 +450,24 @@ export default {
     padding: 17px 24px;
     background: #2B2E37;
     border-radius: 5px;
-    font-family: 'Roboto', sans-serif;
+    /* font-family: 'Roboto', sans-serif; */
 }
     .shop{
         padding-top: 160px;
-        background: no-repeat right/80% url(@/assets/img/SolderBack.png) #141721;
+        /* background: no-repeat right/80% url(@/assets/img/SolderBack.png) #141721; */
+        background-color: #1A1814;
     }
     .preshop-container{
-        background: rgba(255, 255, 255, 0.1);
+        /* background: rgba(234, 196, 139, 0.5); */
         border-radius: 5px;
-        padding: 16px;
+        /* padding: 1px; */
+        border: 1px solid rgba(234, 196, 139, 0.5);
     }
     .shop-container{
-        background-color: #060810;
+        background-color: #1A1814;
         /* width: 96vw; */
         padding: 16px;
-        border-radius: 5px;
+        /* border-radius: 5px; */
         /* margin-left: 30px; */
         /* margin-right: 30px; */
     }
@@ -476,10 +490,15 @@ export default {
     }
     .dropdown__filters{
         /* margin-top: 15px; */
-        color: white;
+        color: #FFFFFF4D;
         font-weight: 400;
         font-size: 1.042vw;
-        font-family: 'Roboto', sans-serif;
+        /* font-family: 'Roboto', sans-serif; */
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border: 1px solid #1E1D21;
         
     }
     .dropdown__catalog::after{
@@ -489,7 +508,7 @@ export default {
         display: none;
     }
     .dropdown__filters:focus{
-        box-shadow: 0 0 0 0.2rem #3F7AF5;
+        box-shadow: 0 0 0 0.1rem #EAC48B;
     }
     .catalog__ArrowImg{
         width: 10px;
@@ -499,8 +518,8 @@ export default {
         box-shadow: 0 0 0 0.2rem #3F7AF5;
     }
     .catalog__dropmenu{
-        background-color: #2B2E37; 
-        box-shadow: 0px 8px 16px 0px rgba(63, 122, 245, 0.2);
+        background-color: #332e24; 
+        box-shadow: 0px 8px 8px 0px rgba(234, 196, 139, 0.2);
         color: white;   
         padding: 0;
     }
@@ -512,18 +531,19 @@ export default {
         border-bottom: 1px solid white;
     }
     .catalog__dropmenu .active{
-        background-color: rgba(44, 109, 245,0.2);
-        color: #2C6DF5;
+        background-color: rgba(234, 196, 139, 0.2);
+        color: rgba(255, 255, 255,0.5);
         /* border: 1px solid #753ef9; */
     }
     .catalog__dropitem:hover{
         color: white;
         font-size: 20px;
-        background-color: #3F7AF5;
+        background-color: #EAC48B;
         cursor: pointer;
     }
     .catalog__search{
         background-color: #171717;    
+        border: 1px solid rgba(255, 255, 255, 0.1);
         background: url(@/assets/img/loopCatalogM.png) no-repeat 10px center;
         background-size: 1.250vw;
         color: white;
@@ -532,9 +552,9 @@ export default {
         height: 2.865vw;
         font-size: 24px;
         font-weight: 500;
-        border-color: rgba(54,	53,	60, 0);
+        border-color: rgba(255, 255, 255, 0.1);
         border-radius: 5px;
-        font-family: 'Roboto', sans-serif;
+        /* font-family: 'Roboto', sans-serif; */
     }
     .catalog__search::placeholder{
         color: rgba(255, 255, 255, 0.3);
@@ -561,43 +581,45 @@ export default {
     }
     .prices__container{
         display: flex;
-        align-items: center;
+        /* align-items: center; */
+        flex-direction: column;
     }
     .price__min{
-        width: 7.917vw;
+        width: 8.917vw;
         height: 38px;
         font-weight: 500;
         font-size: 1.458vw;
-        background-color: #171717;
-        border-color: rgba(54,	53,	60, 0);
-        border-radius: 5px;
-        background: url(@/assets/img/priceTenge.png) no-repeat right 5px center #141721;
+        /* background-color: #171717; */
+        border: 1px solid #EAC48B;
+        background: url(@/assets/img/tenge.png) no-repeat right 5px center #1E1D21;
         padding-right: 30px;
         color: white;
-        background-size: 1.563vw;
+        background-size: 0.563vw;
 
     }
     .price__max{
-        width: 7.917vw;
+        width: 8.917vw;
         height: 38px;
         font-weight: 500;
         font-size: 1.458vw;
-        background-color: #171717;
-        border-color: rgba(54,	53,	60, 0);
-        border-radius: 5px;
-        background: url(@/assets/img/priceTenge.png) no-repeat right 5px center #141721;
+        /* background-color: #171717; */
+        border: 1px solid #EAC48B;
+        background: url(@/assets/img/tenge.png) no-repeat right 5px center #1E1D21;
         padding-right: 30px;
         color: white;
-        background-size: 1.563vw;
+        background-size: 0.563vw;
     }
 
     .filters__spans{
-        color: white;
-        font-weight: 400;
-        font-size: 1.250vw;
+        color: #EAC48B;
+        font-weight: 500;
+        font-size: 1.042vw;
         margin-right: 16px;
+        margin-top: 1.667vw;
     }
-
+    .filtcontm{
+        margin-top: 1.042vw;
+    }
     
     
     /* RARITY */
@@ -676,14 +698,15 @@ export default {
 
     .filter__button{
         color: white;
-        background-color: #3F7AF5;
+        background-color: #F15A24;
         border-radius: 5px;
+        margin-top: 3.646vw;
     }
 
 /* CATALOG */
     .catalog{
         display: grid;
-        grid-template-columns: repeat(7, 1fr);
+        grid-template-columns: repeat(5, 1fr);
         grid-column-gap: 25px;
         grid-row-gap: 25px;
         overflow-y: auto;
@@ -705,7 +728,7 @@ export default {
         display: flex;
         flex-direction: column;
         color: white;
-        background-color: #36353C;
+        background: radial-gradient(82.39% 82.39% at 50% 50%, rgba(30, 29, 33, 0.4) 0%, rgba(60, 59, 63, 0.4) 100%);
         border-radius: 5px;
         height: fit-content;
         box-shadow: 2px 4px 10px #00000040;
@@ -717,11 +740,15 @@ export default {
         justify-content: flex-end;
         padding-right: 10px;
         padding-left: 10px;
-        background-color: rgb(23, 23, 23, 0.5);
+        padding-top: 5px;
+        
     }
     .item__rare{
         /* position: absolute; */
-        top: 0;
+        /* top: 0; */
+        background-color: #6D6D6D;
+        padding: 4px 8px;
+        border-radius: 5px;
         /* margin-right: 5px; */
         /* text-align: right; */
     }
@@ -733,7 +760,7 @@ export default {
         font-weight: 500;
         color: white;
         padding-right: 10px;
-        font-family: 'Roboto', sans-serif;
+        /* font-family: 'Roboto', sans-serif; */
         line-height: 1.5vw;
     }
     .item__img{
@@ -753,23 +780,9 @@ export default {
         font-weight: 600;
         font-size: 1.250vw;
         padding: 0 10px;
-        color: #2C6DF5;
-        font-family: 'Roboto', sans-serif;
-        margin-top: 10px;
-    }
-    .item__more{
-        background: rgba(255, 255, 255, 0.3);
         color: white;
-        font-weight: 600;
-        font-size: 16px;
-        text-align: center;
-        line-height: 24px;
-        display: none;
+        /* font-family: 'Roboto', sans-serif; */
         margin-top: 10px;
-        /* flex-grow: 1; */
-        font-family: 'Roboto', sans-serif;
-        /* padding-top: 5px; */
-        padding-bottom: 3px;
     }
     .item__bottomcont{
         flex-grow: 1;
@@ -777,14 +790,11 @@ export default {
         flex-direction: column;
         justify-content: space-between;
     }
-    .item:hover .item__more{
-        display: block;
-    }
-    .item:hover .item__price{
-        display: none;
-    }
     .item:hover{
-        background: radial-gradient(82.21% 62.79% at 50% 50%, #3F7AF5 0%, #03266F 100%)
+        background: rgba(241, 90, 36, 0.4);
+    }
+    .catalog__topfilters{
+        flex-direction: column;
     }
     
     @media screen and (max-width:480px){
@@ -825,6 +835,7 @@ export default {
         }
         .catalog__topfilters{
             flex-wrap: wrap;
+            flex-direction: column;
         }
         .catalog__search{
             width: 90vw;

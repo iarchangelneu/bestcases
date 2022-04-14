@@ -47,7 +47,7 @@
 
                             <div class="d-flex justify-content-between" style="margin-top:1.083vw;">
                                 <span class="productModal__priceName">
-                                    Стоимость
+                                    Стоимость:
                                 </span>
                                 <span class="productModal__price">
                                     {{ Math.floor(product.cost) }} ₸
@@ -89,8 +89,8 @@ export default {
 <style scoped>
 .productModal__priceName{
     font-weight: 700;
-    font-size: 24px;
-    font-family: 'Roboto', sans-serif;
+    font-size: 1.250vw;
+    /* font-family: 'Roboto', sans-serif; */
 }
 li::before {
     content: '';
@@ -117,14 +117,14 @@ li::before {
 }
 #ProductModal .modal-content{
     color: white;
-    background-color: #141721;
+    background-color: #1A1814;
 }
 .productModal__card{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     /* background-color: #252331; */
-    padding: 1.042vw 1.563vw 2.083vw 1.563vw;
+    padding: 1.042vw 1.563vw 2.083vw 0;
     border-radius: 10px;
 }
 .productModal__img{
@@ -135,7 +135,7 @@ li::before {
 .productModal__name{
     font-weight: 700;
     font-size: 1.354vw;
-    text-align: center;
+    text-align: left;
 }
 .productModal__table{
     margin-top: 1.823vw;  
@@ -155,8 +155,8 @@ li::before {
     border-bottom: 1px solid #F6F6F6CC; */
 }
 .productModal__btn{
-    background: rgba(44, 109, 245, 0.2);
-    border-color: #2C6DF5;
+    background: rgba(241, 90, 36, 0.4);
+    border-color: #F15A24;
     border-radius: 5px;
     color: white;
     font-weight: 400;
