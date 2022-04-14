@@ -211,9 +211,9 @@ export default {
 .dropdown-content {
   display: none;
   position: absolute;
-  background-color: #202025;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(44, 109, 245, 0.2);
+  background-color: #332e24;;
+  /* min-width: 160px; */
+  box-shadow: 0px 8px 8px 0px rgb(234 196 139 / 20%);
   z-index: 1;
 }
 
@@ -222,10 +222,11 @@ export default {
   padding: 12px 16px;
   text-decoration: none;
   display: block;
+  cursor: pointer;
 }
 
 .dropdown-content a:hover {
-  background-color: rgb(44, 109, 245);
+  background-color: #EAC48B;
   color: white;
 }
 
