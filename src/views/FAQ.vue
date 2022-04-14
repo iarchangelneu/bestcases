@@ -150,7 +150,7 @@ export default {
     },
   },
   mounted() {
-    for (let i = 0; i < 8; i++) {
+    for (let i = 0; i < 3; i++) {
       $(`#collapse${i}`).on("show.bs.collapse", function () {
         document.querySelector(`#faqPlus${i}`).innerHTML = "-";
       });
