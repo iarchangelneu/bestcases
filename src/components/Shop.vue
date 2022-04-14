@@ -813,12 +813,14 @@ export default {
             width: 100%;
         }
         .price__min{
-            width: 30vw;
+            width: 35vw;
             font-size: 5.458vw;
+            background-size: 15px;
         }
         .price__max{
-            width: 30vw;
+            width: 35vw;
             font-size: 5.458vw;
+            background-size: 15px;
         }
         .filtcontm{
             width: 100%;
@@ -854,6 +856,21 @@ export default {
         }
         .price__max::placeholder{
             font-size: 24px !important;
+        }
+        .catalog__search{
+            background-size: 20px;
+        }
+        .filters__spans{
+            font-size: 5.042vw;
+        }
+        .pagination__prev{
+            font-size: 3.25vw;    
+        }
+        .pagination__next{
+            font-size: 3.25vw;    
+        }
+        .pagination__numbers{
+            font-size: 3.25vw; 
         }
     }
     

@@ -370,6 +370,7 @@ export default {
   align-items: center;
   justify-content: center;
 }
+
 .casses__row{
   display: flex;
   justify-content: space-between;
@@ -439,6 +440,37 @@ export default {
   font-weight: 700;
   font-size: 1.042vw;
   color: #2C6DF5;
+}
+@media screen and (max-width:480px){
+  .casses__title img{
+  width: 50vw;
+}
+.cases__sale{
+  font-size:12px;
+  padding: 2px 4px;
+}
+.casses__img{
+  width: 25.323vw;
+}
+.casses__row{
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+.casses__namePop{
+  width: 30vw;
+}
+.casses__card{
+  align-items: center;
+}
+.casses__btnR{
+  font-size: 3.04vw;
+}
+.casses__name{
+  font-size: 3vw;
+}
+.casses__btn{
+  font-size: 3.25vw;
+}
 }
 
 </style>
