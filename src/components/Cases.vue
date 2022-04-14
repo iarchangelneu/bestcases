@@ -1,83 +1,157 @@
 <template>
   <div class="container-fluid cases_page">
     <div class="row">
-      <div class="col-2 pl-0">
-        <div class="livecont">
-          <div class="live">
-            
-            <div v-for="live in 20" :key="live">
-              <div class="live__card">
-                <img src="@/assets/img/livepistol.png" alt="" class="live__img">
-                <div class="live__bottom">
-                  <div class="live__bottomgroup">
-                    <div class="live__name">
-                      Pistol      
-                    </div>
-                    <div class="live__quality">
-                      FN
-                    </div>
-                  </div>
-                  <div class="live__price">
-                    1000 ₸
-                  </div>
+      <div class="col-12" style="padding-top: 40px;">
+        <div class="casses__section">
+          <span class="casses__title">
+            <img src="../assets/img/SalesCases.png" alt="">
+          </span>
+          <div class="casses__row">
+            <div class="casses__card">
+              <div class="cases__sale">
+                -5%
+              </div>
+              <img src="../assets/img/casesDeagle.png" alt="" class="casses__img">
+              <div class="card__footer">
+                <div class="casses__name">
+                Desert Eagle
+                </div>
+                <div class="casses__btn">
+                  <span>от</span>&nbsp; 5 690 ₸
                 </div>
               </div>
             </div>
-            
-          </div>
-        </div>
-      </div>
-      <div class="col-10" style="padding-top: 40px;">
-        <div class="casses__section">
-          <div class="casses__title">
-            Популярные кейсы
-          </div>
-          <div class="casses__row">
-            <div class="casses__card" v-for="cases in salecases" :key="cases">
-              <img src="@/assets/img/casesRar5.png" alt="" class="casses__img">
-              <div class="casses__name">
-                {{cases.name}}
+
+            <div class="casses__card">
+              <div class="cases__sale">
+                -10%
               </div>
-              <button class="casses__btn btn">
-                {{Math.floor(cases.cost)}} ₸
-              </button>
+              <img src="../assets/img/casesAwp.png" alt="" class="casses__img">
+              <div class="card__footer">
+                <div class="casses__name">
+                AWP
+                </div>
+                <div class="casses__btn">
+                  <span>от</span>&nbsp; 15 990 ₸
+                </div>
+              </div>
+            </div>
+
+            <div class="casses__card">
+              <div class="cases__sale">
+                -15%
+              </div>
+              <img src="../assets/img/casesKnife.png" alt="" class="casses__img">
+              <div class="card__footer">
+                <div class="casses__name">
+                Bowie Knife
+                </div>
+                <div class="casses__btn">
+                  <span>от</span>&nbsp; 200 590 ₸
+                </div>
+              </div>
+            </div>
+
+            <div class="casses__card">
+              <div class="cases__sale">
+                -5%
+              </div>
+              <img src="../assets/img/casesRev.png" alt="" class="casses__img">
+              <div class="card__footer">
+                <div class="casses__name">
+                R8 Revolver
+                </div>
+                <div class="casses__btn">
+                  <span>от</span>&nbsp; 7 390 ₸
+                </div>
+              </div>
+            </div>
+
+            <div class="casses__card">
+              <div class="cases__sale">
+                -10%
+              </div>
+              <img src="../assets/img/casesPistol.png" alt="" class="casses__img">
+              <div class="card__footer">
+                <div class="casses__name">
+                Glock-18
+                </div>
+                <div class="casses__btn">
+                  <span>от</span>&nbsp; 3 590 ₸
+                </div>
+              </div>
             </div>
           </div>
         </div>
 
         <div class="casses__section">
-          <div class="casses__title">
-            Лучшие предметы
-          </div>
+          <span class="casses__title">
+            <img src="../assets/img/PopularCases.png" alt="">
+          </span>
           <div class="casses__row">
-            <div class="casses__card" v-for="cases in cases" :key="cases">
-              <img src="@/assets/img/casesRar5.png" alt="" class="casses__img">
-              <div class="casses__name">
-                {{cases.name}}
+            <div class="casses__card">
+              <img src="../assets/img/GammaCase.png" alt="" class="casses__img">
+              <div class="card__footer">
+                <div class="casses__name">
+                Кейс “Gamma”
+                </div>
+                <div class="casses__btn">
+                  <span>от</span>&nbsp; 5 690 ₸
+                </div>
               </div>
-              <button class="casses__btn btn">
-                {{Math.floor(cases.cost)}} ₸
-              </button>
+            </div>
+
+            <div class="casses__card">
+              <img src="../assets/img/RestrictedCase.png" alt="" class="casses__img">
+              <div class="card__footer">
+                <div class="casses__name">
+                Кейс “Restricted”
+                </div>
+                <div class="casses__btn">
+                  <span>от</span>&nbsp; 15 990 ₸
+                </div>
+              </div>
+            </div>
+
+            <div class="casses__card">
+              <img src="../assets/img/InfernoCase.png" alt="" class="casses__img">
+              <div class="card__footer">
+                <div class="casses__name">
+                Кейс “Inferno”
+                </div>
+                <div class="casses__btn">
+                  <span>от</span>&nbsp; 200 590 ₸
+                </div>
+              </div>
+            </div>
+
+            <div class="casses__card">
+              <img src="../assets/img/BravoCase.png" alt="" class="casses__img">
+              <div class="card__footer">
+                <div class="casses__name">
+                Кейс “Bravo”
+                </div>
+                <div class="casses__btn">
+                  <span>от</span>&nbsp; 7 390 ₸
+                </div>
+              </div>
+            </div>
+
+            <div class="casses__card">
+              <img src="../assets/img/RevolverCase.png" alt="" class="casses__img">
+              <div class="card__footer">
+                <div class="casses__name">
+                Кейс “Revolver”
+                </div>
+                <div class="casses__btn">
+                  <span>от</span>&nbsp; 3 590 ₸
+                </div>
+              </div>
             </div>
           </div>
         </div>
 
-        <div class="casses__section">
-          <div class="casses__title">
-            Скидки и новинки
-          </div>
-          <div class="casses__row">
-            <div class="casses__card" v-for="cases in newcases" :key="cases">
-              <img src="@/assets/img/casesRar5.png" alt="" class="casses__img">
-              <div class="casses__name">
-                {{cases.name}}
-              </div>
-              <button class="casses__btn btn">
-                {{Math.floor(cases.cost)}} ₸
-              </button>
-            </div>
-          </div>
-        </div>
+        
 
 
       </div>
@@ -89,9 +163,13 @@
 export default {
   data() {
     return {
-      cases: [],
+      cases: [
+        
+      ],
       newcases:[],
-      salecases: [],
+      salecases: [
+        
+      ],
       activeTab: "Classik",
     };
   },
@@ -101,15 +179,15 @@ export default {
       axios
         .get(path)
         .then((res) => {
-          for(let i=31; i<35;i++){
-              this.newcases.push(res.data[i])
-          }
-          for(let i=91; i<95;i++){
-              this.cases.push(res.data[i])
-          }
-          for(let i=51; i<55;i++){
-              this.salecases.push(res.data[i])
-          }
+          // for(let i=31; i<36;i++){
+          //     this.newcases.push(res.data[i])
+          // }
+          // for(let i=91; i<96;i++){
+          //     this.cases.push(res.data[i])
+          // }
+          // for(let i=51; i<56;i++){
+          //     this.salecases.push(res.data[i])
+          // }
           // this.cases = res.data;
           console.log(res);
           console.log(this.cases);
@@ -171,9 +249,28 @@ export default {
 </script>
 
 <style scoped>
+.cases__sale{
+  background: rgba(241, 90, 36, 0.4);  
+  border: 1px solid #F15A24;
+  padding: 4px 8px;
+  margin-left: auto;
+  margin-right: 10px;
+  border-radius: 5px;
+}
+.casses__btn span{
+  font-size: 1.042vw;
+  color: rgba(255, 255, 255, 0.3);
+}
+
+
+
+
+
+
+
 .cases_page{
-  background-color: #141721;
-  background: no-repeat right/80% url(@/assets/img/SolderBack.png) #141721;
+  background-color: #1A1814;
+  /* background: no-repeat right/80% url(@/assets/img/SolderBack.png) #141721; */
   padding-bottom: 20px;
 }
 
@@ -184,6 +281,9 @@ export default {
   font-weight: 900;
   font-size: 1.667vw;
   color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .casses__row{
   display: flex;
@@ -194,22 +294,20 @@ export default {
   color: white;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  justify-content: space-between;
 }
 .casses__img{
   width: 14.323vw;
 }
 .casses__name{
-  font-weight: 400;
-  font-size: 1.250vw;
+  font-weight: 900;
+  font-size: 1.146vw;
   margin-top: 2.204vw;
 }
 .casses__btn{
   font-size: 1.250vw;
-  background-color: #2C6DF5;
-  padding: 0.625vw 2.604vw;
   color: white;
-  margin-top: 1.304vw;
+  margin-top: 0.304vw;
   font-weight: 400;
 }
 /* LIVE */
