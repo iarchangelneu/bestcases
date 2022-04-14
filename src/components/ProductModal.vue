@@ -203,5 +203,8 @@ li::before {
     .productModal__card{
         padding: 3.042vw 1.563vw 4.083vw 1.563vw;
     }
+    .productModal__priceName{
+        font-size: 3.25vw;
+    }
 }
 </style>
