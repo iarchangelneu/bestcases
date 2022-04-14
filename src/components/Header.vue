@@ -22,7 +22,7 @@
           style="width: 1.25vw"
         />
         <div class="purse__count">0 ₸</div>
-        <div class="popolnit">+ пополнить</div>
+        <div class="popolnit" @click="topupMoney">+ пополнить</div>
       </div>
       <div class="user">
         <img
