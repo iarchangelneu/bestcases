@@ -185,7 +185,7 @@ input[type="checkbox"] {
   box-sizing: border-box;
   border-radius: 7px;
   margin-right: 1.69vw;
-  padding: 0.52vw 1.56vw 0.52vw 1.56vw;
+  padding: 0.52vw 12.56vw 0.52vw 1.56vw;
   cursor: pointer;
   width: 7.448vw;
   display: flex;

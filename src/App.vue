@@ -378,6 +378,14 @@ export default {
   text-align: center;
   color: #fff;
 }
+@media screen and (max-width: 1024px){
+  .modal__inputs{
+    padding-top: 4.17vw;
+    padding-left: 9.82vw;
+    padding-right: 6.82vw;
+}
+
+}
 @media screen and (max-width: 480px) {
   .modal__textOps {
     font-family: "Roboto";
@@ -405,6 +413,10 @@ export default {
     height: 3.9vw !important;
     font-size: 2.5vw !important;
     width: 62.62vw !important;
+  } 
+  .modal__inputs{
+    padding-left: 10.82vw;
+    padding-right: 1.82vw;
   }
   .modal__signin,
   .haveacc__button,
