@@ -14,7 +14,7 @@
       <hr style="width: 29.74vw" />
       <div class="cart__total pl__pr">
         <p class="cart__total__text">Итого</p>
-        <p class="cart__total__text" >{{ cartSum +'₸'}} </p>
+        <p class="cart__total__text">{{ cartSum + "₸" }}</p>
       </div>
       <div class="cart__buttons pl__pr">
         <router-link to="cart"
@@ -25,7 +25,7 @@
           data-toggle="modal"
           data-target="#exampleModal"
         >
-          Оформить
+          Оформить заказ
         </button>
       </div>
     </div>
@@ -90,7 +90,7 @@ export default {
 }
 .test::-webkit-scrollbar-thumb {
   border-radius: 15px;
-  background-color: #2C6DF5;
+  background-color: #f15a24;
 }
 .test::-webkit-scrollbar-track {
   -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.2);
@@ -102,12 +102,14 @@ export default {
   overflow-y: scroll;
 }
 .cart__button {
-  background: #2c6df5;
+  background: rgba(241, 90, 36, 0.4);
+  border: 1px solid #f15a24;
+  box-sizing: border-box;
   border-radius: 5px;
-  padding: 0.78vw 1.09vw 0.78vw 1.09vw;
+  padding: 0.83vw 6.93vw 0.83vw 6.93vw;
   text-transform: uppercase;
   color: #fff;
-  font-weight: 400;
+  font-weight: 500;
   font-size: 1.04vw;
   border: 0;
   margin-bottom: 1.67vw;
@@ -124,7 +126,7 @@ export default {
   color: #fff;
 }
 .cart__total {
-  margin-top:2.08vw;
+  margin-top: 2.08vw;
   display: flex;
   justify-content: space-between;
 }
@@ -144,7 +146,7 @@ hr {
   font-weight: 400;
   font-size: 1.25vw;
   color: #f7f7f7;
-  margin-right:3vw;
+  margin-right: 3vw;
   white-space: nowrap;
 }
 .product__text {
@@ -207,7 +209,7 @@ hr {
   background-color: white;
   z-index: 1001;
   overflow: auto;
-  background: #141721;
+  background: #1a1814;
   box-shadow: -10px 0px 15px rgba(0, 0, 0, 0.15);
 }
 .cart__productIMG {

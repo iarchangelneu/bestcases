@@ -1,6 +1,8 @@
 <template>
   <div class="main" v-if="IsLogged">
-    <p class="lc">Личный кабинет</p>
+    <div class="logo__cab">
+      <img src="@/assets/img/cab.svg" style="width: 20.83vw" alt="" />
+    </div>
     <div class="user">
       <div class="user__info">
         <div class="user__info-group">
@@ -25,28 +27,19 @@
       </div>
       <div class="user__credits">
         <div class="user__credits-money">
-          <img src="img/wallet.svg" alt="" />
-          <p class="user__count">0 ₸</p>
+          <img src="@/assets/img/walletlc.svg" style="width: 2.08vw" alt="" />
+          <p class="user__count" style="margin-left: 1vw">0 ₸</p>
         </div>
         <div class="user__credits-buttons">
-          <button class="user__btn" data-toggle="modal" data-target="#Money">
-            <img
-              src="@/assets/img/dollar.svg"
-              alt=""
-              style="width: 1.25vw"
-            />Пополнить баланс
+          <button class="user__btn1" data-toggle="modal" data-target="#Money">
+            Пополнить баланс
           </button>
           <button
             class="user__btn"
-            style="background: rgba(44, 109, 245, 0.2)"
             data-toggle="modal"
             data-target="#OutputMoney"
           >
-            <img
-              src="@/assets/img/money.svg"
-              alt=""
-              style="width: 1.2vw"
-            />Вывести средства
+            Вывести средства
           </button>
         </div>
       </div>
@@ -54,8 +47,46 @@
 
     <div class="user__settings">
       <hr />
-      <div class="user__links">
-        <div class="user__links-trade pt-pb">
+      <div class="user__links row">
+        <div  class="col">
+          <div class="user__password pt-pb">
+            <div class="user__password-input">
+              <label for="current__password" class="title"
+                >Текущий пароль</label
+              >
+              <input
+                type="password"
+                name="current__password"
+                id="current__password"
+                class="user-input"
+              />
+            </div>
+
+            <div class="user__password-input">
+              <label for="new__password" class="title">Новый пароль</label>
+              <input
+                type="password"
+                name="new__password"
+                id="new__password"
+                class="user-input"
+              />
+            </div>
+
+            <div>
+              <label for="accept__password" class="title"
+                >Подвердите пароль</label
+              >
+              <input
+                type="password"
+                name="accept__password"
+                id="accept__password"
+                class="user-input"
+              />
+            </div>
+            <button class="user__btn">Сменить пароль</button>
+          </div>
+        </div>
+        <div class="user__links-trade pt-pb col">
           <div>
             <p class="title">Трейд-ссылка</p>
             <a href="#" class="howget">Как получить?</a>
@@ -73,51 +104,18 @@
               class="chain"
             />
           </div>
-        </div>
-        <div class="user__links-email pt-pb">
-          <div class="user__password-input" style="flex-direction: row">
-            <p class="title">E-mail</p>
-            <img src="@/assets/img/pen.svg" style="width: 1.04vw" alt="#" />
+          <div class="user__links-email pt-pb">
+            <div class="user__password-input" style="flex-direction: row">
+              <p class="title">E-mail</p>
+              <img src="@/assets/img/pen.svg" style="width: 1.04vw" alt="#" />
+            </div>
+            <input
+              type="email"
+              placeholder="alex_krrr777@csmarket.com"
+              class="user-input"
+            />
           </div>
-          <input
-            type="email"
-            placeholder="alex_krrr777@csmarket.com"
-            class="user-input"
-          />
         </div>
-      </div>
-      <hr />
-      <div class="user__password pt-pb">
-        <div class="user__password-input">
-          <label for="current__password" class="title">Текущий пароль</label>
-          <input
-            type="password"
-            name="current__password"
-            id="current__password"
-            class="user-input"
-          />
-        </div>
-
-        <div class="user__password-input">
-          <label for="new__password" class="title">Новый пароль</label>
-          <input
-            type="password"
-            name="new__password"
-            id="new__password"
-            class="user-input"
-          />
-        </div>
-
-        <div>
-          <label for="accept__password" class="title">Подвердите пароль</label>
-          <input
-            type="password"
-            name="accept__password"
-            id="accept__password"
-            class="user-input"
-          />
-        </div>
-        <button class="user__btn">Сменить пароль</button>
       </div>
     </div>
   </div>
@@ -134,6 +132,10 @@ export default {
 </script>
 
 <style scoped>
+.logo__cab {
+  display: flex;
+  justify-content: center;
+}
 .auth {
   text-align: center;
   font-size: 6vw;
@@ -202,7 +204,6 @@ export default {
   color: #fff;
 }
 .user__credits {
-  display: flex;
   height: 8.33vw;
   align-items: center;
   flex-wrap: wrap;
@@ -210,8 +211,8 @@ export default {
 .user__credits-money {
   display: flex;
   min-width: 8.33vw;
-  align-items: center;
-  justify-content: space-evenly;
+  align-items: baseline;
+  justify-content: flex-end;
   margin: 0 2rem;
 }
 .user__credits-money p {
@@ -222,25 +223,34 @@ export default {
 }
 .user__credits-buttons {
   display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  /* align-content: center; */
-  height: 7.29vw;
+}
+.user__btn1 {
+  font-family: "Roboto";
+  background: rgba(241, 90, 36, 0.4);
+  border: 1px solid #f15a24;
+  box-sizing: border-box;
+  border-radius: 5px;
+  -webkit-clip-path: polygon(0 10%, 100% 0, 100% -90%, 0 100%);
+  clip-path: polygon(10% 0, 0 100%, 90% 100%, 100% 0);
+  color: #fff;
+  font-size: 1.04vw;
+  font-weight: 400;
+  margin-right: 2vw;
+  padding: 0.94vw 2.71vw 0.94vw 2.71vw;
 }
 .user__btn {
-  text-align: center;
-  color: #fff;
+  font-family: "Roboto";
+  background: rgba(241, 90, 36, 0.4);
+  border: 1px solid #f15a24;
+  box-sizing: border-box;
   border-radius: 5px;
-  background-color: #2c6df5;
-  border: 1px solid #2c6df5;
-  display: flex;
-  align-content: center;
-  justify-content: center;
-  column-gap: 1.04vw;
-  align-items: center;
+  -webkit-clip-path: polygon(0 10%, 100% 0, 100% -90%, 0 100%);
+  clip-path: polygon(10% 0, 0 100%, 90% 100%, 100% 0);
+  color: #fff;
   font-size: 1.04vw;
-  line-height: 1.2vw;
-  padding: 0.83vw 2.08vw 0.83vw 2.08vw;
+  font-weight: 400;
+  margin-right: 2vw;
+  padding: 0.94vw 2.71vw 0.94vw 2.71vw;
 }
 .user__credits-buttons button {
   min-width: 14.58vw;
@@ -260,10 +270,8 @@ hr {
 }
 .user__links-trade {
   padding: 1rem 0;
-  display: flex;
   width: 50%;
   gap: 1rem;
-  flex-direction: column;
 }
 .user__links-trade > div {
   display: flex;
@@ -271,15 +279,19 @@ hr {
 }
 
 .user-input {
-  height: 4.08vw;
+  height: 3.13vw;
   width: 100%;
   border: 0;
   padding: 5px;
   color: rgba(255, 255, 255, 0.3);
-  background: #141721;
-  border: 1px solid #246bff;
+  background: radial-gradient(
+    82.39% 82.39% at 50% 50%,
+    rgba(30, 29, 33, 0.4) 0%,
+    rgba(60, 59, 63, 0.4) 100%
+  );
+  border: 1px solid #6d6d6d;
   box-sizing: border-box;
-  box-shadow: 0px 0px 10px #2c6df5;
+  border-radius: 5px;
 }
 .title {
   font-weight: 500;
@@ -319,9 +331,9 @@ hr {
   padding: 0.5em 0;
 }
 @media screen and (max-width: 480px) {
-  .user__count{
+  .user__count {
     font-size: 4vw !important;
-    margin-bottom:7vw;
+    margin-bottom: 7vw;
   }
   .user__margin {
     margin-left: 7vw !important;
@@ -337,17 +349,19 @@ hr {
     margin-bottom: 1vw;
   }
   .user__info-name,
-  .steam__href, .title, .howget {
+  .steam__href,
+  .title,
+  .howget {
     font-size: 2vw !important;
   }
-  .howget{
+  .howget {
     margin-top: -1vw;
   }
-  .user__password-input img{
-    width:3vw !important;
+  .user__password-input img {
+    width: 3vw !important;
     margin-top: -5vw;
   }
-  .user-input{
+  .user-input {
     height: 6vw;
   }
   .user__info-name {
@@ -356,7 +370,7 @@ hr {
   .user__info img {
     max-width: 13vw;
   }
-  .user__info-group{
+  .user__info-group {
     padding-bottom: 0;
     padding-left: 1rem;
   }
