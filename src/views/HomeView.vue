@@ -12,7 +12,7 @@
             скидками по всему СНГ
           </p>
           <div class="stock__buttons">
-            <button class="stock__btnright">Перейти к кейсам</button>
+            <button class="stock__btnright" onclick="window.location.href = '/cases';">Перейти к кейсам</button>
           </div>
         </div>
         <img
@@ -80,7 +80,7 @@
               style="width: 20.83vw"
             />
             <p class="case__desc">Магический кейс</p>
-            <button class="case__btn">Купить за 9 900 ₸</button>
+            <button class="case__btn" @click="tryToBuy">Купить за 9 900 ₸</button>
           </div>
           <div class="case__content">
             <img
@@ -90,7 +90,7 @@
               style="width: 21.98vw"
             />
             <p class="case__desc mtc">Кислотный кейс</p>
-            <button class="case__btn">Купить за 11 900 ₸</button>
+            <button class="case__btn" @click="tryToBuy">Купить за 11 900 ₸</button>
           </div>
           <div class="case__content">
             <img
@@ -100,7 +100,7 @@
               style="width: 21.09vw"
             />
             <p class="case__desc">Ледяной кейс</p>
-            <button class="case__btn">Купить за 5 490 ₸</button>
+            <button class="case__btn" @click="tryToBuy">Купить за 5 490 ₸</button>
           </div>
           <div class="case__content">
             <img
@@ -110,7 +110,7 @@
               style="width: 19.79vw"
             />
             <p class="case__desc mtc">Золотой кейс</p>
-            <button class="case__btn">Купить за 11 200 ₸</button>
+            <button class="case__btn" @click="tryToBuy">Купить за 11 200 ₸</button>
           </div>
         </div>
         <div class="cases__cases2">
@@ -122,7 +122,7 @@
               style="width: 16.77vw"
             />
             <p class="case__desc">Кейс Удачи</p>
-            <button class="case__btn">Купить за 11 900 ₸</button>
+            <button class="case__btn" @click="tryToBuy">Купить за 11 900 ₸</button>
           </div>
           <div class="case__content2">
             <img
@@ -132,7 +132,7 @@
               style="width: 17.97vw"
             />
             <p class="case__desc mtc">Lifestyle кейс</p>
-            <button class="case__btn">Купить за 5 490 ₸</button>
+            <button class="case__btn" @click="tryToBuy">Купить за 5 490 ₸</button>
           </div>
           <div class="case__content2">
             <img
@@ -142,7 +142,7 @@
               style="width: 15.21vw"
             />
             <p class="case__desc case7t">Danger кейс</p>
-            <button class="case__btn case7" style="margin-top: 1.8vw">
+            <button class="case__btn case7" style="margin-top: 1.8vw" @click="tryToBuy">
               Купить за 11 200 ₸
             </button>
           </div>
@@ -156,7 +156,7 @@
   <div class="popular__items">
     <div class="popular__weapons"></div>
     <div class="item__weapons__blocks">
-      <div class="item__block">
+      <div class="item__block"  @click="tryToBuy">
         <div class="item__block__content">
           <img src="@/assets/img/brain.png" alt="" style="width: 13.02vw" />
           <p class="weapon__name" style="margin-top: 1.3vw">USP-S</p>
@@ -166,7 +166,7 @@
           </div>
         </div>
       </div>
-      <div class="item__block">
+      <div class="item__block"  @click="tryToBuy">
         <div class="item__block__content">
           <img src="@/assets/img/m4a4.png" alt="" style="width: 13.02vw" />
           <p class="weapon__name" style="margin-top: 1.6vw">M4A4</p>
@@ -176,7 +176,7 @@
           </div>
         </div>
       </div>
-      <div class="item__block">
+      <div class="item__block"  @click="tryToBuy">
         <div class="item__block__content">
           <img
             src="@/assets/img/web.png"
@@ -190,7 +190,7 @@
           </div>
         </div>
       </div>
-      <div class="item__block">
+      <div class="item__block"  @click="tryToBuy">
         <div class="item__block__content">
           <img src="@/assets/img/flame.png" alt="" style="width: 13.02vw" />
           <p class="weapon__name" style="margin-top: 1.6vw">Desert Eagle</p>
@@ -200,7 +200,7 @@
           </div>
         </div>
       </div>
-      <div class="item__block">
+      <div class="item__block"  @click="tryToBuy">
         <div class="item__block__content">
           <img src="@/assets/img/butterfly.png" alt="" style="width: 13.02vw" />
           <p class="weapon__name">Butterfly Knife Doppler</p>
