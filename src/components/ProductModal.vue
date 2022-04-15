@@ -53,7 +53,7 @@
                                     {{ Math.floor(product.cost) }} ₸
                                 </span>
                             </div>
-                            <button class="productModal__btn mt-3" @click="AddToCart(product)">
+                            <button class="productModal__btn mt-3" @click="addToCartModal(product)">
                                     Добавить в корзину
                             </button>
                         </div>    
@@ -81,6 +81,16 @@ export default {
         ]),    
         closeProduct(){
             $('#ProductModal').modal('hide')
+        },
+        addToCartModal(product){
+            if(this.IsLogged){
+                this.AddToCart(product);
+                $('#ProductModal').modal('hide');
+            }
+            else{
+                $('#ProductModal').modal('hide');
+                $("#exampleModal").modal("show");
+            }
         }
     }
 }
