@@ -32,12 +32,12 @@
         <input
           type="hidden"
           name="openid.realm"
-          value="https://bescases.kz/"
+          value="https://bestcases.kz/"
         />
         <input
           type="hidden"
           name="openid.return_to"
-          value="https://bescases.kz/error"
+          value="https://bestcases.kz/error"
         />
       <button class="steam__footer">Войти через Steam</button>
       </form>
