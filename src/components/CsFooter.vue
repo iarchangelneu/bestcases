@@ -1,12 +1,5 @@
 <template>
   <section class="footer">
-    <div class="footer__counts">
-      <img src="@/assets/img/qiwi.svg" style="width: 11.67vw" alt="" />
-      <img src="@/assets/img/visa.svg" style="width: 9.53vw" alt="" />
-      <img src="@/assets/img/master.svg" style="width: 5.94vw" alt="" />
-      <img src="@/assets/img/wm.svg" style="width: 13.91vw" alt="" />
-    </div>
-
     <div class="footer_navigation">
       <img src="@/assets/img/footerlogo.svg" style="width: 7.76vw" alt="" />
       <the-navbar></the-navbar>
@@ -43,7 +36,7 @@
       </form>
     </div>
     <div class="copyright">
-      <p class="copyright__text">© 2018-2022 BestCases</p>
+      <p class="copyright__text">© 2022 BestCases</p>
       <p class="copyright__text">ТОО "Нейтрон", г.Алматы, пр-кт Республики 13</p>
     </div>
   </section>
