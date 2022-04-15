@@ -1,7 +1,7 @@
 <template>
   <div class="steam__error">
     <div>
-      <p class="steam__title">Произошла непредвидення ошибка.</p>
+      <p class="steam__title">Произошла непредвиденная ошибка.</p>
       <p class="steam__desc">
         Выберите другой способ оплаты или повторите попытку позже.
       </p>
