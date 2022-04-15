@@ -44,7 +44,7 @@
     </div>
     <div class="copyright">
       <p class="copyright__text">© 2018-2022 BestCases</p>
-      <p class="copyright__text">ТОО “BestCases.kz”, г. Алматы, Аксай 2, 39</p>
+      <p class="copyright__text">ТОО "Нейтрон", г.Алматы, пр-кт Республики 13</p>
     </div>
   </section>
 </template>
