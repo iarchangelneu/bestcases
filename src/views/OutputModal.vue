@@ -116,7 +116,7 @@
               class="money__input"
               placeholder="Cумма ₸"
             />
-            <button class="complete__btn" onclick="window.location.href = '/payerror';"></button>Вывести</button>
+            <button class="complete__btn" onclick="window.location.href = '/payerror';">Вывести</button>
           </div>
         </div>
       </div>

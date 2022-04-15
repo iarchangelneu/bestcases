@@ -77,7 +77,7 @@
         <input
           type="hidden"
           name="openid.return_to"
-          value="http://localhost:8080/account"
+          value="http://localhost:8080/error"
         />
         <button class="signin__steam">
           <img src="../assets/img/steamLog.png" alt="" class="steam__img" />

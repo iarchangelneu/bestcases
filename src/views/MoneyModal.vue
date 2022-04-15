@@ -98,7 +98,7 @@
               class="money__input"
               placeholder="0 ₸"
             />
-            <button class="complete__btn">Пополнить баланс</button>
+            <button class="complete__btn" onclick="window.location.href = '/payerror';">Пополнить баланс</button>
           </div>
         </div>
       </div>
@@ -185,7 +185,7 @@ input[type="checkbox"] {
   box-sizing: border-box;
   border-radius: 7px;
   margin-right: 1.69vw;
-  padding: 0.52vw 12.56vw 0.52vw 1.56vw;
+  padding: 0.52vw 5.56vw 0.52vw 1.56vw;
   cursor: pointer;
   width: 7.448vw;
   display: flex;
@@ -310,6 +310,7 @@ input[type="checkbox"] {
   }
   .type__img__one {
     border: 1px solid #f7f7f7 !important;
+     padding: 0.52vw 12.56vw 0.52vw 1.56vw;
   }
 }
 </style>
