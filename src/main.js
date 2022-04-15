@@ -33,7 +33,7 @@ const Mixin = {
     },
     methods: {
         reg() {
-            const path = "https://realcases.kz/api/register";
+            const path = "https://bestcases.kz/api/register";
             axios
                 .post(path, { login: this.usernameR, password: this.passwordR, e_mail: this.emailR })
                 .then((res) => {
@@ -59,7 +59,7 @@ const Mixin = {
         },
         login() {
 
-            const path = "https://realcases.kz/api/login";
+            const path = "https://bestcases.kz/api/login";
             axios
                 .post(path, { login: this.username, password: this.password })
                 .then((res) => {

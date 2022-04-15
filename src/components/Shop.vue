@@ -295,7 +295,7 @@ export default {
     
     methods:{
         getData(){
-            const path = 'https://realcases.kz/api/shop';
+            const path = 'https://bestcases.kz/api/shop';
             axios.get(path)
                 .then((res) => {
                     this.weapons = res.data;

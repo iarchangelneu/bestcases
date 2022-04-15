@@ -241,7 +241,7 @@ export default {
   },
   methods: {
      getCases() {
-      const path = "https://realcases.kz/api/cases";
+      const path = "https://bestcases.kz/api/cases";
       axios
         .get(path)
         .then((res) => {
