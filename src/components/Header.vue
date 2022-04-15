@@ -344,6 +344,9 @@ export default {
   }
 }
 @media screen and (max-width: 480px) {
+  .dropdown-content{
+    right:0.1vw;
+  }
   .purse__count {
     font-size: 2.55vw;
   }

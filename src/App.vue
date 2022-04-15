@@ -378,15 +378,23 @@ export default {
   text-align: center;
   color: #fff;
 }
-@media screen and (max-width: 1024px){
-  .modal__inputs{
+@media screen and (max-width: 1024px) {
+  .modal__inputs {
     padding-top: 4.17vw;
     padding-left: 9.82vw;
     padding-right: 6.82vw;
-}
-
+  }
 }
 @media screen and (max-width: 480px) {
+  .reg__btn {
+    padding-left: 28.6vw;
+    padding-right: 2.6vw;
+  }
+  .reg__button {
+    font-size: 2vw;
+    width: 0;
+    padding: 0.83vw 27.23vw 0.83vw 8.23vw;
+  }
   .modal__textOps {
     font-family: "Roboto";
     font-size: 3vw;
@@ -413,10 +421,10 @@ export default {
     height: 3.9vw !important;
     font-size: 2.5vw !important;
     width: 62.62vw !important;
-  } 
-  .modal__inputs{
-    padding-left: 10.82vw;
-    padding-right: 1.82vw;
+  }
+  .modal__inputs {
+    padding-left: 12.82vw;
+    padding-right: 2.8200000000000003vw;
   }
   .modal__signin,
   .haveacc__button,

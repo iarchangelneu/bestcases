@@ -344,7 +344,7 @@ hr {
   .user__btn img {
     width: 3.5vw !important;
   }
-  .user__btn {
+  .user__btn, .user__btn1 {
     font-size: 2vw;
     margin-bottom: 1vw;
   }
