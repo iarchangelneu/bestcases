@@ -692,6 +692,9 @@ hr {
 }
 
 @media screen and (max-width: 480px) {
+  .whywe__title img{
+    width: 40vw !important;
+  }
   .item__block__content {
     height: 31.36vw;
   }
@@ -708,7 +711,7 @@ hr {
     font-size: 2.55vw;
   }
   .popular__text__content img {
-    width: 4vw !important;
+    width: 52vw !important;
   }
   .case__btn {
     font-size: 2vw;
@@ -815,7 +818,7 @@ hr {
     font-size: 1.4vw;
   }
   .cases__sales img{
-    width:18vw !important
+    width:42vw !important
   }
   .case7t{
         margin-bottom: 1.2vw;

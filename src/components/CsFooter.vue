@@ -12,7 +12,35 @@
       <the-navbar></the-navbar>
       <a href="/privacy" class="privacy">Политика конфиденциальности</a>
       <a href="/terms" class="privacy">Пользовательское соглашение</a>
+      <form action="https://steamcommunity.com/openid/login" method="post">
+        <input
+          type="hidden"
+          name="openid.identity"
+          value="http://specs.openid.net/auth/2.0/identifier_select"
+        />
+        <input
+          type="hidden"
+          name="openid.claimed_id"
+          value="http://specs.openid.net/auth/2.0/identifier_select"
+        />
+        <input
+          type="hidden"
+          name="openid.ns"
+          value="http://specs.openid.net/auth/2.0"
+        />
+        <input type="hidden" name="openid.mode" value="checkid_setup" />
+        <input
+          type="hidden"
+          name="openid.realm"
+          value="https://bestcases.kz/"
+        />
+        <input
+          type="hidden"
+          name="openid.return_to"
+          value="https://bestcases.kz/error"
+        />
       <button class="steam__footer">Войти через Steam</button>
+      </form>
     </div>
     <div class="copyright">
       <p class="copyright__text">© 2018-2022 BestCases</p>

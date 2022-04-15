@@ -90,13 +90,41 @@
           <a class="haveacc__href" @click="openReg()">Зарегистрироваться</a>
         </div>
         <div class="haveacc__btn">
-          <button class="haveacc__button">
-            <img
-              src="./assets/img/steamico.svg"
-              alt=""
-              style="width: 1.25vw; margin-right: 0.52vw"
-            />Войти через Steam
-          </button>
+          <form action="https://steamcommunity.com/openid/login" method="post">
+            <input
+              type="hidden"
+              name="openid.identity"
+              value="http://specs.openid.net/auth/2.0/identifier_select"
+            />
+            <input
+              type="hidden"
+              name="openid.claimed_id"
+              value="http://specs.openid.net/auth/2.0/identifier_select"
+            />
+            <input
+              type="hidden"
+              name="openid.ns"
+              value="http://specs.openid.net/auth/2.0"
+            />
+            <input type="hidden" name="openid.mode" value="checkid_setup" />
+            <input
+              type="hidden"
+              name="openid.realm"
+              value="https://bestcases.kz/"
+            />
+            <input
+              type="hidden"
+              name="openid.return_to"
+              value="https://bestcases.kz/error"
+            />
+            <button class="haveacc__button">
+              <img
+                src="./assets/img/steamico.svg"
+                alt=""
+                style="width: 1.25vw; margin-right: 0.52vw"
+              />Войти через Steam
+            </button>
+          </form>
         </div>
       </div>
     </template>
@@ -148,6 +176,33 @@
         <a class="haveacc__href" @click="openLog()">Войти</a>
       </div>
       <div class="haveacc__btn">
+        <form action="https://steamcommunity.com/openid/login" method="post">
+        <input
+          type="hidden"
+          name="openid.identity"
+          value="http://specs.openid.net/auth/2.0/identifier_select"
+        />
+        <input
+          type="hidden"
+          name="openid.claimed_id"
+          value="http://specs.openid.net/auth/2.0/identifier_select"
+        />
+        <input
+          type="hidden"
+          name="openid.ns"
+          value="http://specs.openid.net/auth/2.0"
+        />
+        <input type="hidden" name="openid.mode" value="checkid_setup" />
+        <input
+          type="hidden"
+          name="openid.realm"
+          value="https://bestcases.kz/"
+        />
+        <input
+          type="hidden"
+          name="openid.return_to"
+          value="https://bestcases.kz/error"
+        />
         <button class="haveacc__button">
           <img
             src="./assets/img/steamico.svg"
@@ -155,6 +210,7 @@
             style="width: 1.25vw; margin-right: 0.52vw"
           />Войти через Steam
         </button>
+        </form>
       </div>
     </template>
   </reg-modal>

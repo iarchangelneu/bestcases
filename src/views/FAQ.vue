@@ -323,7 +323,7 @@ details {
     font-size: 2vw;
   }
   .faq__text img {
-    width: 4.06vw !important;
+    width: 62vw !important;
   }
   .faq__main {
     font-size: 2.55vw;
