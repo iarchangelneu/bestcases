@@ -72,5 +72,8 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
+.product__desd{
+  margin-left:1vw;
+}
 </style>
