@@ -1,84 +1,74 @@
 <template>
   <div class="container-fluid cases_page">
     <div class="row">
-      <div class="col-12" style="padding-top: 40px;">
+      <div class="col-12" style="padding-top: 40px">
         <div class="casses__section">
           <span class="casses__title">
-            <img src="../assets/img/SalesCases.png" alt="">
+            <img src="../assets/img/SalesCases.png" alt="" />
           </span>
           <div class="casses__row" @click="tryToBuy">
             <div class="casses__card">
-              <div class="cases__sale">
-                -5%
-              </div>
-              <img src="../assets/img/casesDeagle.png" alt="" class="casses__img">
+              <div class="cases__sale">-5%</div>
+              <img
+                src="../assets/img/casesDeagle.png"
+                alt=""
+                class="casses__img"
+              />
               <div class="card__footer">
-                <div class="casses__name">
-                Desert Eagle
-                </div>
-                <div class="casses__btn">
-                  <span>от</span>&nbsp; 5 690 ₸
-                </div>
+                <div class="casses__name">Desert Eagle</div>
+                <div class="casses__btn"><span>от</span>&nbsp; 5 690 ₸</div>
               </div>
             </div>
 
             <div class="casses__card">
-              <div class="cases__sale">
-                -10%
-              </div>
-              <img src="../assets/img/casesAwp.png" alt="" class="casses__img">
+              <div class="cases__sale">-10%</div>
+              <img
+                src="../assets/img/casesAwp.png"
+                alt=""
+                class="casses__img"
+              />
               <div class="card__footer">
-                <div class="casses__name">
-                AWP
-                </div>
-                <div class="casses__btn">
-                  <span>от</span>&nbsp; 15 990 ₸
-                </div>
+                <div class="casses__name">AWP</div>
+                <div class="casses__btn"><span>от</span>&nbsp; 15 990 ₸</div>
               </div>
             </div>
 
             <div class="casses__card">
-              <div class="cases__sale">
-                -15%
-              </div>
-              <img src="../assets/img/casesKnife.png" alt="" class="casses__img">
+              <div class="cases__sale">-15%</div>
+              <img
+                src="../assets/img/casesKnife.png"
+                alt=""
+                class="casses__img"
+              />
               <div class="card__footer">
-                <div class="casses__name">
-                Bowie Knife
-                </div>
-                <div class="casses__btn">
-                  <span>от</span>&nbsp; 200 590 ₸
-                </div>
+                <div class="casses__name">Bowie Knife</div>
+                <div class="casses__btn"><span>от</span>&nbsp; 200 590 ₸</div>
               </div>
             </div>
 
             <div class="casses__card">
-              <div class="cases__sale">
-                -5%
-              </div>
-              <img src="../assets/img/casesRev.png" alt="" class="casses__img">
+              <div class="cases__sale">-5%</div>
+              <img
+                src="../assets/img/casesRev.png"
+                alt=""
+                class="casses__img"
+              />
               <div class="card__footer">
-                <div class="casses__name">
-                R8 Revolver
-                </div>
-                <div class="casses__btn">
-                  <span>от</span>&nbsp; 7 390 ₸
-                </div>
+                <div class="casses__name">R8 Revolver</div>
+                <div class="casses__btn"><span>от</span>&nbsp; 7 390 ₸</div>
               </div>
             </div>
 
             <div class="casses__card">
-              <div class="cases__sale">
-                -10%
-              </div>
-              <img src="../assets/img/casesPistol.png" alt="" class="casses__img">
+              <div class="cases__sale">-10%</div>
+              <img
+                src="../assets/img/casesPistol.png"
+                alt=""
+                class="casses__img"
+              />
               <div class="card__footer">
-                <div class="casses__name">
-                Glock-18
-                </div>
-                <div class="casses__btn">
-                  <span>от</span>&nbsp; 3 590 ₸
-                </div>
+                <div class="casses__name">Glock-18</div>
+                <div class="casses__btn"><span>от</span>&nbsp; 3 590 ₸</div>
               </div>
             </div>
           </div>
@@ -86,66 +76,68 @@
 
         <div class="casses__section">
           <span class="casses__title">
-            <img src="../assets/img/PopularCases.png" alt="">
+            <img src="../assets/img/PopularCases.png" alt="" />
           </span>
           <div class="casses__row" @click="tryToBuy">
             <div class="casses__card">
-              <img src="../assets/img/GammaCase.png" alt="" class="casses__img">
+              <img
+                src="../assets/img/GammaCase.png"
+                alt=""
+                class="casses__img"
+              />
               <div class="card__footer">
-                <div class="casses__name casses__namePop">
-                Кейс “Gamma”
-                </div>
-                <div class="casses__btnR">
-                  <span>от</span>&nbsp; 3 500 ₸
-                </div>
+                <div class="casses__name casses__namePop">Кейс “Gamma”</div>
+                <div class="casses__btnR"><span>от</span>&nbsp; 3 500 ₸</div>
               </div>
             </div>
 
             <div class="casses__card">
-              <img src="../assets/img/RestrictedCase.png" alt="" class="casses__img">
+              <img
+                src="../assets/img/RestrictedCase.png"
+                alt=""
+                class="casses__img"
+              />
               <div class="card__footer">
                 <div class="casses__name casses__namePop">
-                Кейс “Запретная зона”
+                  Кейс “Запретная зона”
                 </div>
-                <div class="casses__btnR">
-                  <span>от</span>&nbsp; 3 700 ₸
-                </div>
+                <div class="casses__btnR"><span>от</span>&nbsp; 3 700 ₸</div>
               </div>
             </div>
 
             <div class="casses__card">
-              <img src="../assets/img/InfernoCase.png" alt="" class="casses__img">
+              <img
+                src="../assets/img/InfernoCase.png"
+                alt=""
+                class="casses__img"
+              />
               <div class="card__footer">
-                <div class="casses__name casses__namePop">
-                Кейс “Huntsman”
-                </div>
-                <div class="casses__btnR">
-                  <span>от</span>&nbsp; 3 000 ₸
-                </div>
+                <div class="casses__name casses__namePop">Кейс “Huntsman”</div>
+                <div class="casses__btnR"><span>от</span>&nbsp; 3 000 ₸</div>
               </div>
             </div>
 
             <div class="casses__card">
-              <img src="../assets/img/BravoCase.png" alt="" class="casses__img">
+              <img
+                src="../assets/img/BravoCase.png"
+                alt=""
+                class="casses__img"
+              />
               <div class="card__footer">
-                <div class="casses__name casses__namePop">
-                Кейс “Bravo”
-                </div>
-                <div class="casses__btnR">
-                  <span>от</span>&nbsp; 4 390 ₸
-                </div>
+                <div class="casses__name casses__namePop">Кейс “Bravo”</div>
+                <div class="casses__btnR"><span>от</span>&nbsp; 4 390 ₸</div>
               </div>
             </div>
 
             <div class="casses__card">
-              <img src="../assets/img/RevolverCase.png" alt="" class="casses__img">
+              <img
+                src="../assets/img/RevolverCase.png"
+                alt=""
+                class="casses__img"
+              />
               <div class="card__footer">
-                <div class="casses__name casses__namePop">
-                Кейс “Revolver”
-                </div>
-                <div class="casses__btnR">
-                  <span>от</span>&nbsp; 2 590 ₸
-                </div>
+                <div class="casses__name casses__namePop">Кейс “Revolver”</div>
+                <div class="casses__btnR"><span>от</span>&nbsp; 2 590 ₸</div>
               </div>
             </div>
           </div>
@@ -153,14 +145,18 @@
 
         <div class="casses__section">
           <span class="casses__title">
-            <img src="../assets/img/BestCases.png" alt="">
+            <img src="../assets/img/BestCases.png" alt="" />
           </span>
           <div class="casses__row" @click="tryToBuy">
             <div class="casses__card">
-              <img src="../assets/img/BestP20001.png" alt="" class="casses__img">
+              <img
+                src="../assets/img/BestP20001.png"
+                alt=""
+                class="casses__img"
+              />
               <div class="card__footer">
                 <div class="casses__name casses__namePop">
-                P2000 “Imperial Dragon”
+                  P2000 “Imperial Dragon”
                 </div>
                 <div class="casses__btnR">
                   <span>Купить за</span>&nbsp; 4 000 ₸
@@ -169,11 +165,9 @@
             </div>
 
             <div class="casses__card">
-              <img src="../assets/img/BestAwp.png" alt="" class="casses__img">
+              <img src="../assets/img/BestAwp.png" alt="" class="casses__img" />
               <div class="card__footer">
-                <div class="casses__name casses__namePop">
-                AWP “Asiimov”
-                </div>
+                <div class="casses__name casses__namePop">AWP “Asiimov”</div>
                 <div class="casses__btnR">
                   <span>Купить за</span>&nbsp; 40 000 ₸
                 </div>
@@ -181,11 +175,13 @@
             </div>
 
             <div class="casses__card">
-              <img src="../assets/img/BestKarambit.png" alt="" class="casses__img">
+              <img
+                src="../assets/img/BestKarambit.png"
+                alt=""
+                class="casses__img"
+              />
               <div class="card__footer">
-                <div class="casses__name casses__namePop">
-                Karambit “Fade
-                </div>
+                <div class="casses__name casses__namePop">Karambit “Fade</div>
                 <div class="casses__btnR">
                   <span>Купить за</span>&nbsp; 500 000 ₸
                 </div>
@@ -193,11 +189,13 @@
             </div>
 
             <div class="casses__card">
-              <img src="../assets/img/BestM4a4.png" alt="" class="casses__img">
+              <img
+                src="../assets/img/BestM4a4.png"
+                alt=""
+                class="casses__img"
+              />
               <div class="card__footer">
-                <div class="casses__name casses__namePop">
-                M4A4 "Howl"
-                </div>
+                <div class="casses__name casses__namePop">M4A4 "Howl"</div>
                 <div class="casses__btnR">
                   <span>Купить за</span>&nbsp; 110 000 ₸
                 </div>
@@ -205,11 +203,9 @@
             </div>
 
             <div class="casses__card">
-              <img src="../assets/img/BestAug.png" alt="" class="casses__img">
+              <img src="../assets/img/BestAug.png" alt="" class="casses__img" />
               <div class="card__footer">
-                <div class="casses__name casses__namePop">
-                Aug "Akihabara"
-                </div>
+                <div class="casses__name casses__namePop">Aug "Akihabara"</div>
                 <div class="casses__btnR">
                   <span>Купить за</span>&nbsp; 84 000 ₸
                 </div>
@@ -217,30 +213,23 @@
             </div>
           </div>
         </div>
-        
-
-
       </div>
     </div>
-  </div>  
+  </div>
 </template>
 
 <script>
 export default {
   data() {
     return {
-      cases: [
-        
-      ],
-      newcases:[],
-      salecases: [
-        
-      ],
+      cases: [],
+      newcases: [],
+      salecases: [],
       activeTab: "Classik",
     };
   },
   methods: {
-     getCases() {
+    getCases() {
       const path = "https://bestcases.kz/api/cases";
       axios
         .get(path)
@@ -292,7 +281,7 @@ export default {
       ],
     });
     this.getCases();
-     $(".live").slick({
+    $(".live").slick({
       infinite: true,
       slidesToShow: 9,
       slidesToScroll: 1,
@@ -310,27 +299,26 @@ export default {
       ],
     });
   },
-  
 };
 </script>
 
 <style scoped>
-.casses__card{
+.casses__card {
   cursor: pointer;
 }
-.cases__sale{
-  background: rgba(241, 90, 36, 0.4);  
-  border: 1px solid #F15A24;
+.cases__sale {
+  background: rgba(241, 90, 36, 0.4);
+  border: 1px solid #f15a24;
   padding: 4px 8px;
   margin-left: auto;
   margin-right: 10px;
   border-radius: 5px;
 }
-.casses__btn span{
+.casses__btn span {
   font-size: 1.042vw;
   color: rgba(255, 255, 255, 0.3);
 }
-.casses__namePop{
+.casses__namePop {
   text-align: center;
   margin-top: 1vw;
 }
@@ -351,21 +339,16 @@ export default {
   clip-path: polygon(10% 0, 0 100%, 90% 100%, 100% 0); */
 }
 
-
-
-
-
-
-.cases_page{
-  background-color: #1A1814;
+.cases_page {
+  background-color: #1a1814;
   /* background: no-repeat right/80% url(@/assets/img/SolderBack.png) #141721; */
   padding-bottom: 20px;
 }
 
-.casses__section{
+.casses__section {
   margin-top: 4.167vw;
 }
-.casses__title{
+.casses__title {
   font-weight: 900;
   font-size: 1.667vw;
   color: white;
@@ -374,106 +357,113 @@ export default {
   justify-content: center;
 }
 
-.casses__row{
+.casses__row {
   display: flex;
   justify-content: space-between;
   margin-top: 2.604vw;
 }
-.casses__card{
+.casses__card {
   color: white;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   padding: 10px;
 }
-.casses__card:hover{
-  
-  background: radial-gradient(82.39% 82.39% at 50% 50%, rgba(30, 29, 33, 0.4) 0%, rgba(60, 59, 63, 0.4) 100%)
+.casses__card:hover {
+  background: radial-gradient(
+    82.39% 82.39% at 50% 50%,
+    rgba(30, 29, 33, 0.4) 0%,
+    rgba(60, 59, 63, 0.4) 100%
+  );
 }
-.casses__img{
+.casses__img {
   width: 14.323vw;
 }
-.casses__name{
+.casses__name {
   font-weight: 900;
   font-size: 1.146vw;
   margin-top: 2.204vw;
 }
-.casses__namePop{
+.casses__namePop {
   text-align: center;
   margin-top: 1vw;
 }
-.casses__btn{
-  font-size: 1.250vw;
+.casses__btn {
+  font-size: 1.25vw;
   color: white;
   margin-top: 0.304vw;
   font-weight: 400;
 }
 /* LIVE */
-.live__card{
+.live__card {
   width: 80%;
   padding-top: 1.042vw;
   display: flex;
   flex-direction: column;
-  background: radial-gradient(#1E1D21, #3C3B3F);
-  border-left: 4px solid #2C6DF5;
+  background: radial-gradient(#1e1d21, #3c3b3f);
+  border-left: 4px solid #2c6df5;
 }
-.live__img{
-  width: 7.240vw;
+.live__img {
+  width: 7.24vw;
   margin-left: auto;
   margin-right: auto;
 }
-.live__bottom{
+.live__bottom {
   padding-left: 14px;
   padding-right: 14px;
 }
-.live__bottomgroup{
+.live__bottomgroup {
   display: flex;
   justify-content: space-between;
 }
-.live__name{
+.live__name {
   color: white;
   font-size: 1.042vw;
   font-weight: 900;
 }
-.live__quality{
-  color: #FFFFFF4D;
+.live__quality {
+  color: #ffffff4d;
   font-size: 1.042vw;
 }
-.live__price{
+.live__price {
   font-weight: 700;
   font-size: 1.042vw;
-  color: #2C6DF5;
+  color: #2c6df5;
 }
-@media screen and (max-width:480px){
-  .casses__title img{
-  width: 50vw;
+@media screen and (max-width: 768px) {
+  .casses__title img {
+    width: 40vw;
+  }
 }
-.cases__sale{
-  font-size:12px;
-  padding: 2px 4px;
+@media screen and (max-width: 480px) {
+  .casses__title img {
+    width: 50vw;
+  }
+  .cases__sale {
+    font-size: 12px;
+    padding: 2px 4px;
+  }
+  .casses__img {
+    width: 25.323vw;
+  }
+  .casses__row {
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+  }
+  .casses__namePop {
+    width: 30vw;
+  }
+  .casses__card {
+    align-items: center;
+  }
+  .casses__btnR {
+    font-size: 3.04vw;
+  }
+  .casses__name {
+    font-size: 3vw;
+  }
+  .casses__btn {
+    font-size: 3.25vw;
+  }
 }
-.casses__img{
-  width: 25.323vw;
-}
-.casses__row{
-  flex-wrap: wrap;
-  justify-content: space-evenly;
-}
-.casses__namePop{
-  width: 30vw;
-}
-.casses__card{
-  align-items: center;
-}
-.casses__btnR{
-  font-size: 3.04vw;
-}
-.casses__name{
-  font-size: 3vw;
-}
-.casses__btn{
-  font-size: 3.25vw;
-}
-}
-
 </style>
