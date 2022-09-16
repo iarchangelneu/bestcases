@@ -48,7 +48,7 @@
     <div class="user__settings">
       <hr />
       <div class="user__links row">
-        <div  class="col">
+        <div class="col">
           <div class="user__password pt-pb">
             <div class="user__password-input">
               <label for="current__password" class="title"
@@ -330,6 +330,17 @@ hr {
 .pd-1 {
   padding: 0.5em 0;
 }
+@media screen and (max-width: 768px) {
+  .user {
+    margin: 0;
+  }
+  hr {
+    margin: 0;
+  }
+  .user__password-input p {
+    margin: 0;
+  }
+}
 @media screen and (max-width: 480px) {
   .user__count {
     font-size: 4vw !important;
@@ -344,7 +355,8 @@ hr {
   .user__btn img {
     width: 3.5vw !important;
   }
-  .user__btn, .user__btn1 {
+  .user__btn,
+  .user__btn1 {
     font-size: 2vw;
     margin-bottom: 1vw;
   }

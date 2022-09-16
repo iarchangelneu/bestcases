@@ -12,7 +12,12 @@
             скидками по всему СНГ
           </p>
           <div class="stock__buttons">
-            <button class="stock__btnright" onclick="window.location.href = '/cases';">Перейти к кейсам</button>
+            <button
+              class="stock__btnright"
+              onclick="window.location.href = '/cases';"
+            >
+              Перейти к кейсам
+            </button>
           </div>
         </div>
         <!-- <img
@@ -80,7 +85,9 @@
               style="width: 20.83vw"
             />
             <p class="case__desc">Магический кейс</p>
-            <button class="case__btn" @click="tryToBuy">Купить за 9 900 ₸</button>
+            <button class="case__btn" @click="tryToBuy">
+              Купить за 9 900 ₸
+            </button>
           </div>
           <div class="case__content">
             <img
@@ -90,7 +97,9 @@
               style="width: 21.98vw"
             />
             <p class="case__desc mtc">Кислотный кейс</p>
-            <button class="case__btn" @click="tryToBuy">Купить за 11 900 ₸</button>
+            <button class="case__btn" @click="tryToBuy">
+              Купить за 11 900 ₸
+            </button>
           </div>
           <div class="case__content">
             <img
@@ -100,7 +109,9 @@
               style="width: 21.09vw"
             />
             <p class="case__desc">Ледяной кейс</p>
-            <button class="case__btn" @click="tryToBuy">Купить за 5 490 ₸</button>
+            <button class="case__btn" @click="tryToBuy">
+              Купить за 5 490 ₸
+            </button>
           </div>
           <div class="case__content">
             <img
@@ -110,7 +121,9 @@
               style="width: 19.79vw"
             />
             <p class="case__desc mtc">Золотой кейс</p>
-            <button class="case__btn" @click="tryToBuy">Купить за 11 200 ₸</button>
+            <button class="case__btn" @click="tryToBuy">
+              Купить за 11 200 ₸
+            </button>
           </div>
         </div>
         <div class="cases__cases2">
@@ -122,7 +135,9 @@
               style="width: 16.77vw"
             />
             <p class="case__desc">Кейс Удачи</p>
-            <button class="case__btn" @click="tryToBuy">Купить за 11 900 ₸</button>
+            <button class="case__btn" @click="tryToBuy">
+              Купить за 11 900 ₸
+            </button>
           </div>
           <div class="case__content2">
             <img
@@ -132,7 +147,9 @@
               style="width: 17.97vw"
             />
             <p class="case__desc mtc">Lifestyle кейс</p>
-            <button class="case__btn" @click="tryToBuy">Купить за 5 490 ₸</button>
+            <button class="case__btn" @click="tryToBuy">
+              Купить за 5 490 ₸
+            </button>
           </div>
           <div class="case__content2">
             <img
@@ -142,7 +159,11 @@
               style="width: 15.21vw"
             />
             <p class="case__desc case7t">Danger кейс</p>
-            <button class="case__btn case7" style="margin-top: 1.8vw" @click="tryToBuy">
+            <button
+              class="case__btn case7"
+              style="margin-top: 1.8vw"
+              @click="tryToBuy"
+            >
               Купить за 11 200 ₸
             </button>
           </div>
@@ -156,7 +177,7 @@
   <div class="popular__items">
     <div class="popular__weapons"></div>
     <div class="item__weapons__blocks">
-      <div class="item__block"  @click="tryToBuy">
+      <div class="item__block" @click="tryToBuy">
         <div class="item__block__content">
           <img src="@/assets/img/brain.png" alt="" style="width: 13.02vw" />
           <p class="weapon__name" style="margin-top: 1.3vw">USP-S</p>
@@ -166,7 +187,7 @@
           </div>
         </div>
       </div>
-      <div class="item__block"  @click="tryToBuy">
+      <div class="item__block" @click="tryToBuy">
         <div class="item__block__content">
           <img src="@/assets/img/m4a4.png" alt="" style="width: 13.02vw" />
           <p class="weapon__name" style="margin-top: 1.6vw">M4A4</p>
@@ -176,7 +197,7 @@
           </div>
         </div>
       </div>
-      <div class="item__block"  @click="tryToBuy">
+      <div class="item__block" @click="tryToBuy">
         <div class="item__block__content">
           <img
             src="@/assets/img/web.png"
@@ -190,7 +211,7 @@
           </div>
         </div>
       </div>
-      <div class="item__block"  @click="tryToBuy">
+      <div class="item__block" @click="tryToBuy">
         <div class="item__block__content">
           <img src="@/assets/img/flame.png" alt="" style="width: 13.02vw" />
           <p class="weapon__name" style="margin-top: 1.6vw">Desert Eagle</p>
@@ -200,7 +221,7 @@
           </div>
         </div>
       </div>
-      <div class="item__block"  @click="tryToBuy">
+      <div class="item__block" @click="tryToBuy">
         <div class="item__block__content">
           <img src="@/assets/img/butterfly.png" alt="" style="width: 13.02vw" />
           <p class="weapon__name">Butterfly Knife Doppler</p>
@@ -221,21 +242,21 @@
         <p class="stats__title">Статистика</p>
         <div class="stats__block">
           <div style="margin-right: 4.17vw">
-            <p class="stats__count">{{currentlyOpened}}</p>
+            <p class="stats__count">{{ currentlyOpened }}</p>
             <p class="stats__name">Открытых кейсов</p>
           </div>
           <div>
-            <p class="stats__count">{{usersAll}}</p>
+            <p class="stats__count">{{ usersAll }}</p>
             <p class="stats__name">Всего пользователей</p>
           </div>
         </div>
         <div class="stats__block">
           <div style="margin-right: 6.17vw">
-            <p class="stats__count">{{usersOnline}}</p>
+            <p class="stats__count">{{ usersOnline }}</p>
             <p class="stats__name">Онлайн сейчас</p>
           </div>
           <div>
-            <p class="stats__count">{{contracts}}</p>
+            <p class="stats__count">{{ contracts }}</p>
             <p class="stats__name">Контрактов</p>
           </div>
         </div>
@@ -253,7 +274,7 @@
 <script>
 export default {
   computed: {
-    contracts(){
+    contracts() {
       let curDate = new Date();
       return (
         20000 +
@@ -703,9 +724,28 @@ hr {
   width: 10.68vw;
   text-align: center;
 }
-
+@media screen and (max-width: 768px) {
+  .whywe {
+    margin-top: 3vw;
+  }
+  .cases__sales {
+    margin-top: 3vw;
+  }
+  .cases__cases img {
+    height: 111px;
+  }
+  .mtc {
+    margin-top: 0;
+  }
+  .cases__cases2 img {
+    height: 110px;
+  }
+  .popular__text__content {
+    margin-top: 3vw;
+  }
+}
 @media screen and (max-width: 480px) {
-  .whywe__title img{
+  .whywe__title img {
     width: 40vw !important;
   }
   .item__block__content {
@@ -824,22 +864,23 @@ hr {
   .cases__price {
     font-size: 3.5vw;
   }
-  .whywe__items__title{
+  .whywe__items__title {
     font-size: 2vw;
   }
-  .whywe__items__desc{
+  .whywe__items__desc {
     font-size: 1.4vw;
   }
-  .cases__sales img{
-    width:42vw !important
+  .cases__sales img {
+    width: 42vw !important;
   }
-  .case7t{
-        margin-bottom: 1.2vw;
+  .case7t {
+    margin-bottom: 1.2vw;
   }
-  .stats__count, .stats__title{
-    margin-bottom:0;
+  .stats__count,
+  .stats__title {
+    margin-bottom: 0;
   }
-  .stats__name{
+  .stats__name {
     font-size: 1.5vw;
   }
 }
@@ -851,7 +892,7 @@ hr {
   .stock__buttons {
     margin-left: -1.78vw;
   }
-  .stock__left{
+  .stock__left {
     margin-top: -2.34vw;
   }
 }

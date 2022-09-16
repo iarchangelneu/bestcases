@@ -177,39 +177,39 @@
       </div>
       <div class="haveacc__btn">
         <form action="https://steamcommunity.com/openid/login" method="post">
-        <input
-          type="hidden"
-          name="openid.identity"
-          value="http://specs.openid.net/auth/2.0/identifier_select"
-        />
-        <input
-          type="hidden"
-          name="openid.claimed_id"
-          value="http://specs.openid.net/auth/2.0/identifier_select"
-        />
-        <input
-          type="hidden"
-          name="openid.ns"
-          value="http://specs.openid.net/auth/2.0"
-        />
-        <input type="hidden" name="openid.mode" value="checkid_setup" />
-        <input
-          type="hidden"
-          name="openid.realm"
-          value="https://bestcases.kz/"
-        />
-        <input
-          type="hidden"
-          name="openid.return_to"
-          value="https://bestcases.kz/error"
-        />
-        <button class="haveacc__button">
-          <img
-            src="./assets/img/steamico.svg"
-            alt=""
-            style="width: 1.25vw; margin-right: 0.52vw"
-          />Войти через Steam
-        </button>
+          <input
+            type="hidden"
+            name="openid.identity"
+            value="http://specs.openid.net/auth/2.0/identifier_select"
+          />
+          <input
+            type="hidden"
+            name="openid.claimed_id"
+            value="http://specs.openid.net/auth/2.0/identifier_select"
+          />
+          <input
+            type="hidden"
+            name="openid.ns"
+            value="http://specs.openid.net/auth/2.0"
+          />
+          <input type="hidden" name="openid.mode" value="checkid_setup" />
+          <input
+            type="hidden"
+            name="openid.realm"
+            value="https://bestcases.kz/"
+          />
+          <input
+            type="hidden"
+            name="openid.return_to"
+            value="https://bestcases.kz/error"
+          />
+          <button class="haveacc__button">
+            <img
+              src="./assets/img/steamico.svg"
+              alt=""
+              style="width: 1.25vw; margin-right: 0.52vw"
+            />Войти через Steam
+          </button>
         </form>
       </div>
     </template>
@@ -439,6 +439,16 @@ export default {
     padding-top: 4.17vw;
     padding-left: 9.82vw;
     padding-right: 6.82vw;
+  }
+  .modal-body {
+    font-size: 16px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .modal__inputs {
+    padding-top: 4.17vw;
+    padding-left: 17.82vw;
+    padding-right: 19.82vw;
   }
 }
 @media screen and (max-width: 480px) {
