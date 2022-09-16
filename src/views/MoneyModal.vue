@@ -95,10 +95,14 @@
               type="number"
               name="money"
               id="money"
+              v-model="paySum"
               class="money__input"
               placeholder="0 ₸"
             />
-            <button class="complete__btn" onclick="window.location.href = '/payerror';">Пополнить баланс</button>
+            <button class="complete__btn" @click="purchase">Пополнить баланс</button>
+          </div>
+          <div class="instr__link__cont mt-3 mb-3">
+            <a class="instr__link" href="/instruction">Инструкция по использованию карты для платежа</a>
           </div>
         </div>
       </div>
@@ -111,6 +115,7 @@ export default {
   data() {
     return {
       payment: "",
+      paySum: '',
     };
   },
   methods: {
@@ -118,11 +123,42 @@ export default {
       $("#Money").modal("hide");
       $("#OutputMoney").modal("show");
     },
+    purchase(){
+        if(this.paySum != ''){
+          axios
+          .post('https://bestcases.kz/api/vision_pay/', {cost: this.paySum})
+          .then((res) => {
+              console.log(res)
+              window.location.href=res.data.url
+          })
+          .catch((error) => {
+            console.error(error);
+          });
+        }
+        else{
+          alert('Введите сумму пополнения!')
+        }
+      },
   },
 };
 </script>
 
 <style scpoed>
+.instr__link__cont{
+  display: flex;
+  align-items: flex-end;
+  text-align: center;
+  justify-content: center
+}
+.instr__link{
+    font-weight: 500;
+    font-size: 1.1vw;
+    color: #fff;
+    text-decoration: underline;
+}
+.instr__link:hover{
+  color: #fff;
+}
 .money__typecontent {
   display: flex;
 }

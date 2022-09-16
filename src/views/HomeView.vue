@@ -15,11 +15,11 @@
             <button class="stock__btnright" onclick="window.location.href = '/cases';">Перейти к кейсам</button>
           </div>
         </div>
-        <img
+        <!-- <img
           src="@/assets/img/scroll.svg"
           style="width: 1.41vw; margin-top: 28vw"
           alt=""
-        />
+        /> -->
         <div class="stock__right col">
           <!-- <img
             src="@/assets/img/bgstock.png"
@@ -243,6 +243,11 @@
     </div>
   </div>
   <the-faq></the-faq>
+
+  <div class="payImg__cont">
+      <img class="payImg" src="@/assets/img/payImg2.png" alt="">
+    </div>
+
 </template>
 
 <script>
@@ -293,6 +298,14 @@ export default {
 </script>
 
 <style scoped>
+.payImg{
+        width: 35.68vw;
+    }
+    .payImg__cont{
+        display: flex;
+        justify-content: center;
+        margin-top: 30px;
+    }
 .stats__img {
   margin-top: 9.9vw;
   margin-left: 6.08vw;

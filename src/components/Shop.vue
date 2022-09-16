@@ -872,6 +872,19 @@ export default {
         .pagination__numbers{
             font-size: 3.25vw; 
         }
+        .item__name{
+            font-size: 3.25vw;   
+            line-height: 3.5vw; 
+        }
+        .item__bottom{
+            font-size: 3.25vw;    
+        }
+        .item__price{
+            font-size: 3.25vw;    
+        }
+        .item__rare{
+            font-size: 3vw; 
+        }
     }
     
 </style>

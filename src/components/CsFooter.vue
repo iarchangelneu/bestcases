@@ -1,5 +1,6 @@
 <template>
   <section class="footer">
+
     <div class="footer_navigation">
       <img src="@/assets/img/footerlogo.svg" style="width: 7.76vw" alt="" />
       <the-navbar></the-navbar>
@@ -37,7 +38,7 @@
     </div>
     <div class="copyright">
       <p class="copyright__text">© 2022 BestCases</p>
-      <p class="copyright__text">ТОО "Нейтрон", г.Алматы, пр-кт Республики 13</p>
+      <p class="copyright__text">ТОО “Нейтрон”, г. Алматы, пр-кт Республики 13, Почтовый индекс A15X3C5 (050013), +7 700 557 57 09, БИН 210840016943</p>
     </div>
   </section>
 </template>
@@ -76,11 +77,13 @@ export default {
       let curDate = new Date();
       return Math.floor(7000 + Math.random() * (2000 - 1) + 1);
     },
+    
   },
 };
 </script>
 
 <style scoped>
+
 .steam__footer {
   padding: 0.94vw 2.6vw 0.94vw 2.6vw;
   border: 0;
@@ -96,7 +99,7 @@ export default {
 }
 .copyright__text {
   font-weight: 400;
-  font-size: 1.25vw;
+  font-size: 1.15vw;
   color: rgba(255, 255, 255, 0.3);
   font-family: "Roboto";
 }
