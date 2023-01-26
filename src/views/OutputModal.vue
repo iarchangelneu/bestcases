@@ -1,123 +1,69 @@
 <template>
-  <div
-    class="modal fade"
-    id="OutputMoney"
-    tabindex="-1"
-    aria-labelledby="OutputMoney"
-    aria-hidden="true"
-  >
-    <div class="modal-dialog modal-dialog-centered">
-      <div class="modal-contents2">
+  <div class="modal fade" id="OutputMoney" tabindex="-1" aria-labelledby="OutputMoney" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
         <div class="modal-header">
-          <div class="money__main">
+          <div class="money__main text-center">
             <p>Вывод средств</p>
-            <div class="money__type">
-              <div class="money__typecontent">
-                <button class="money__btn" @click="topUp()">
-                  Пополнение баланса
-                </button>
-                <button class="money__btn money__active">Вывод средств</button>
-              </div>
+
+            <div class="typebuttons d-flex justify-content-center">
+              <button class="outBtn" @click="openOutModal()">ПОПОЛНИТЬ БАЛАНС</button>
+              <button class="inBtn btn__active">ВЫВОД СРЕДСТВ</button>
             </div>
           </div>
         </div>
         <div class="modal-body">
-          <div class="money__system">
-            <div class="warning">
-              <img
-                src="../assets/img/warning.svg"
-                alt=""
-                style="width: 1.4vw; margin-right: 0.26vw"
-              />
-              <p class="warning__text">
-                В случае указание неправильного номера кошелька средства не
-                возвращаются.
-              </p>
-            </div>
-            <div class="warning">
-              <img
-                src="../assets/img/warning.svg"
-                alt=""
-                style="width: 1.4vw; margin-right: 0.26vw"
-              />
-              <p class="warning__text">
-                Процесс обработки заявки обычно занимает меньше часа, но может
-                занять до 3-х рабочих дней.
-              </p>
-            </div>
-            <p class="system__main">Порядок действий для пополнения баланса</p>
-            <p class="money__text">1. Выберите платежную систему</p>
-            <div class="system__type">
-              <div
-                :class="[
-                  'type__img__one',
-                  { payment__active: payment == 'onevision' },
-                ]"
-                @click="payment = 'onevision'"
-              >
-                <img
-                  src="../assets/img/one__vision.png"
-                  alt=""
-                  class="pay_img"
-                />
+          <div class="modalbody">
+            <h2>Порядок действий для вывода средств</h2>
+
+            <p class="mt-3">1. Выберите метод вывода:</p>
+
+            <div class="typesradio mt-4">
+              <div class="d-flex align-items-center mb-4">
+                <input type="radio" name="Type" id="cardType2">
+                <label for="cardType">Банковская карта</label>
               </div>
-              <div
-                data-toggle="modal"
-                data-target="#PaymentError"
-                :class="[
-                  'type__img__one',
-                  { payment__active: payment == 'visa' },
-                ]"
-                @click="payment = 'visa'"
-              >
-                <img src="../assets/img/visa.png" alt="" class="pay_img" />
-              </div>
-              <div
-                data-toggle="modal"
-                data-target="#PaymentError"
-                :class="[
-                  'type__img__one',
-                  { payment__active: payment == 'mastercard' },
-                ]"
-                @click="payment = 'mastercard'"
-              >
-                <img
-                  src="../assets/img/mastercard.png"
-                  alt=""
-                  style=""
-                  class="pay_img"
-                />
+              <div class="d-flex align-items-center">
+                <input type="radio" name="Type" id="telType2">
+                <label for="telType">Баланс мобильного телефона</label>
+                <input type="text" name="tel" id="tel" class="telInp">
               </div>
             </div>
-            <div class="money__text__block">
-              <p class="money__text">
-                2. Подтвердите Ваше согласие с правилами нашей системы
-              </p>
-              <div class="money__checkbox">
-                <input type="checkbox" id="policy" name="policy" />
-                <label for="policy" class="money__label"
-                  >Я согласен с
-                  <a href="/terms">пользовательским соглашением</a> и
-                  <a href="/privacy">политикой конфиденциальности</a></label
-                >
-                <p class="money__text mt">
-                  3. Введите сумму, которую Вы хотите вывести на свой счет
-                </p>
-              </div>
+
+
+            <p class="mt-4">2. Подтвердите Ваше согласие с правилами нашей системы</p>
+
+            <div class="privacycheck d-flex align-items-center mt-4">
+
+              <input type="checkbox" name="privacy" id="privacy">
+
+              <label for="privacy">Я согласен с <a href="/terms">пользовательским соглашением</a> и <a
+                  href="/privacy">политикой конфиденциальности</a> </label>
+
             </div>
+
+            <p class="mt-4">3. Введите сумму, на которую Вы хотите пополнить личный счет, и нажмите на кнопку
+              “Пополнить”. Вы будете переадресованы на сайт платежной системы, где сможете завершить платеж.</p>
           </div>
         </div>
-        <div class="modal-footer">
-          <div class="money__complete">
-            <input
-              v-model="paySum"
-              type="text"
-              name="money"
-              id="money"
-              class="money__input"
-              placeholder="Cумма ₸"
-            />
-            <button class="complete__btn" @click="purchase">Вывести</button>
+
+        <div class="modalfooter">
+          <div class="payzone d-flex justify-content-between align-items-center">
+            <input type="number" name="paySum" id="paySum" v-model="outSum" placeholder="500 ₸">
+            <button id="inButton" @click="phoneOut()">
+              <div class="spinner-border text-info inSpinner" role="status">
+                <span class="sr-only">Loading...</span>
+              </div>
+              <span id="buttonText2">ВЫВЕСТИ</span>
+            </button>
+          </div>
+
+          <div class="pickSum d-flex align-items-center justify-content-between pt-4 pb-4">
+            <button @click="outSum = 500" :class="[{ 'sumActive': outSum == 500 }]">500 ₸</button>
+            <button @click="outSum = 1000" :class="[{ 'sumActive': outSum == 1000 }]">1000 ₸</button>
+            <button @click="outSum = 2000" :class="[{ 'sumActive': outSum == 2000 }]">2000 ₸</button>
+            <button @click="outSum = 5000" :class="[{ 'sumActive': outSum == 5000 }]">5000 ₸</button>
+            <button @click="outSum = 10000" :class="[{ 'sumActive': outSum == 10000 }]">10000 ₸</button>
           </div>
         </div>
       </div>
@@ -126,139 +72,422 @@
 </template>
 
 <script>
+import IMask from 'imask';
+import axios from 'axios';
+
 export default {
   data() {
     return {
       payment: "",
-      paySum: '',
+      outSum: null,
+      isIn: 1,
+      ip: null,
     };
   },
   methods: {
-    topUp() {
+    openOutModal() {
       $("#OutputMoney").modal("hide");
       $("#Money").modal("show");
     },
-    purchase(){
-        if(this.paySum != ''){
-          axios
-          .post('https://realcases.kz/api/vision_pay/', {cost: this.paySum})
+
+    phoneOut() {
+      let card = document.querySelector('#cardType2')
+      let phone = document.querySelector('#telType2')
+      let number = document.querySelector('#tel')
+      let span = document.querySelector('#buttonText2')
+      let spin = document.querySelector('.inSpinner')
+      let button = document.querySelector('#inButton')
+
+      if (card.checked == false && phone.checked == false) {
+        alert("Выберите способ оплаты")
+      }
+
+      else if (this.outSum >= 500 && card.checked == true) {
+        var token = localStorage.getItem('userName')
+        axios
+          .post('https://bestcases.kz/api/vision_return/', { cost: this.outSum, jwt_token: token })
           .then((res) => {
-              console.log(res)
-              window.location.href=res.data.url
+            console.log(res)
+            window.location.href = res.data.url
+
           })
           .catch((error) => {
             console.error(error);
+            console.log('Успех')
           });
+        span.style.display = 'None'
+        button.disabled = true
+        spin.classList.add('outSpinnerActive')
+
+        setTimeout(() => {
+          span.style.display = 'block'
+          button.disabled = false
+          spin.classList.remove('outSpinnerActive')
+        }, 30000);
+
+
+      }
+      else if (this.outSum >= 500 && phone.checked == true) {
+
+        if (number.value) {
+          var token = localStorage.getItem('userName')
+          axios
+            .post('https://bestcases.kz/api/vision_mobile_return/', { cost: this.outSum, jwt_token: token, phone: number.value })
+            .then((res) => {
+
+              span.style.display = 'None'
+              button.disabled = true
+              spin.classList.add('outSpinnerActive')
+
+              setTimeout(() => {
+                span.style.display = 'block'
+                button.disabled = false
+                spin.classList.remove('outSpinnerActive')
+              }, 30000);
+
+              console.log(res)
+              window.location.href = res.data.url
+
+
+            })
+            .catch((error) => {
+              console.error(error);
+            })
+
         }
-        else{
-          alert('Введите сумму пополнения!')
+        else {
+          alert("Укажите номер телефона")
         }
-      },
+
+
+
+      }
+      else {
+        alert('Сумма должна быть ни меньше 500')
+      }
+    },
+
   },
+  mounted() {
+    var phoneMask = IMask(
+      document.getElementById('tel'), {
+      mask: '+70000000000'
+    });
+  }
 };
 </script>
 
-<style scpoed>
-.modal-contents2 {
-  background: #1a1814;
-  border: 1px solid rgba(234, 196, 139, 0.5);
-  box-sizing: border-box;
-  border-radius: 5px;
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  pointer-events: auto;
-  outline: 0;
-}
-.modal-body {
-  margin-top: -2.5vw;
-}
-.warning {
-  display: flex;
-  align-items: flex-start;
-}
-.warning__text {
-  font-family: "Roboto";
-  font-weight: 400;
-  font-size: 0.83vw;
-  color: #fff;
-}
-.money__complete {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-.mt {
-  margin-top: 2.5vw;
-}
-.money__checkbox {
-  margin-top: 2.5vw;
-}
-input[type="checkbox"] {
-  transform: scale(1.5);
-  padding: 0.52vw;
-}
-.money__label a {
-  text-decoration: underline;
-  color: #fff;
-}
-.type__img__visa {
-  border: 3px solid #f7f7f7;
-  box-sizing: border-box;
-  border-radius: 7px;
-  margin-right: 4.69vw;
-  padding: 2.45vw 1.77vw 2.45vw 1.77vw;
-  cursor: pointer;
-}
-.type__img__master {
-  border: 3px solid #f7f7f7;
-  box-sizing: border-box;
-  border-radius: 7px;
-  padding: 1.04vw 1.77vw 1.04vw 1.77vw;
-  cursor: pointer;
+<style scoped>
+.modal-content {
+  border: 3px solid rgba(234, 196, 139, 0.5);
 }
 
-.system__type {
-  display: flex;
-  margin-top: 2.08vw;
+.outSpinnerActive {
+  display: block !important;
 }
-.money__active {
-  background: #eac48b !important;
-  border-radius: 5px;
-  text-align: center;
+
+.inSpinner {
+  display: none;
 }
-.money__btn {
-  z-index: 4;
-  display: flex;
-  font-weight: 400;
-  font-size: 1.04vw;
-  box-sizing: border-box;
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  box-sizing: border-box;
+
+.sumActive {
+  background: linear-gradient(235.92deg, #753EF9 14.85%, #9D75FF 87.62%) !important;
+  border: 0 !important;
+  transition: all .3s ease;
+}
+
+.pickSum button {
+  padding: 12px 20px;
+  background: rgba(255, 255, 255, 0.1);
   border-radius: 5px;
-  background: transparent;
-  align-items: center;
+  border: 2px solid #EAC48B;
+
+  font-family: 'Exo', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 24px;
+  color: #FFFFFF;
+  transition: all .3s ease;
+}
+
+
+.telInp {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 5px;
+  border: 1px solid #EAC48B;
+  font-family: 'Exo', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 37px;
+  text-align: left;
   color: #fff;
-  padding: 0.63vw 1.02vw 0.63vw 1.02vw;
+  margin-left: 16px;
+  width: 40% !important;
 }
+
+.payzone button {
+  background: #F15A24;
+  border-radius: 5px;
+  padding: 16px 73px;
+  border: 0;
+
+  font-family: 'Exo', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 27px;
+  transition: all .3s ease;
+  /* identical to box height */
+
+
+  color: #FFFFFF;
+
+}
+
+.payzone input {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 5px;
+  border: 2px solid #EAC48B;
+  font-family: 'Exo', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 28px;
+  line-height: 37px;
+  text-align: right;
+  height: 59px;
+
+  color: #FFFFFF;
+}
+
+.modalfooter {
+  padding: 0 50px;
+}
+
+.privacycheck a {
+  text-decoration: underline;
+  font-family: 'Exo', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 21px;
+  color: #FFFFFF;
+}
+
+.privacycheck label {
+  font-family: 'Exo', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 21px;
+  color: #FFFFFF;
+  margin-left: 20px;
+  margin-bottom: 0;
+}
+
+.privacycheck input {
+  width: 20px;
+  height: 20px;
+}
+
+.typesradio input {
+  width: 25px;
+  height: 25px;
+}
+
+.typesradio label {
+  font-family: 'Exo', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 27px;
+  color: #FFFFFF;
+  margin-bottom: 0;
+  margin-left: 16px;
+}
+
+.modalbody p {
+  font-family: 'Exo', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 21px;
+
+  color: #FFFFFF;
+}
+
+.modalbody {
+  padding: 0 35px;
+}
+
+h2 {
+  font-family: 'Exo', sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 27px;
+  color: #FFFFFF;
+}
+
+.outBtn {
+  background: transparent;
+  border-radius: 10px;
+  padding: 12px 42px;
+  border: 1px solid rgba(234, 196, 139, 0.5);
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  border-left: 0;
+  width: 100%;
+
+
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 21px;
+  font-family: 'Exo', sans-serif;
+  color: #fff;
+}
+
+.inBtn {
+  background: #EAC48B;
+  ;
+  border-radius: 10px;
+  padding: 12px 42px;
+  border: 0;
+  width: 100%;
+
+
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 21px;
+  font-family: 'Exo', sans-serif;
+  color: #fff;
+}
+
+.money__main p {
+  color: #fff;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 32px;
+}
+
+.money__main {
+  padding: 20px 50px;
+}
+
 .modal-dialog {
-  min-width: 41.67vw;
+  width: 100% !important;
+  min-width: 40% !important;
 }
-.modal-header,
-.modal-footer {
-  border-bottom: 0;
-  border-top: 0;
-}
-.modal-footer {
-  display: contents;
-}
-@media screen and (max-width: 480px) {
-  .warning__text {
-    font-size: 2.5vw !important;
+
+@media (max-width: 1440px) {
+  .payzone input {
+    width: 180px;
   }
-  .warning img {
-    width: 4.08vw !important;
+
+  .pickSum button {
+    padding: 12px 10px;
+  }
+
+  .outBtn,
+  .inBtn {
+    padding: 12px 15px;
+  }
+}
+
+@media (max-width: 1366px) {
+  .payzone button {
+    padding: 16px 43px;
+  }
+}
+
+@media (max-width: 1024px) {
+  h2 {
+    font-size: 16px;
+  }
+
+  .typesradio label {
+    font-size: 16px;
+  }
+
+  .inBtn,
+  .outBtn {
+    font-size: 14px;
+  }
+
+  .pickSum button {
+    font-size: 14px;
+  }
+
+  .payzone button {
+    font-size: 16px;
+  }
+
+  @media (max-width: 480px) {
+    .money__main {
+      padding: 20px 20px;
+    }
+
+    .modalbody {
+      padding: 0 5px;
+    }
+
+    .modalfooter {
+      padding: 0 20px;
+    }
+
+    .privacycheck label,
+    .modalbody p,
+    .typesradio label {
+      font-size: 14px;
+    }
+
+    .payzone button {
+      padding: 16px 34px;
+    }
+
+    .privacycheck input {
+      width: 50px;
+      height: 50px;
+    }
+  }
+
+  @media (max-width: 390px) {
+
+    .outBtn,
+    .inBtn {
+      padding: 12px 0px;
+    }
+
+    h2 {
+      font-size: 14px;
+    }
+
+    .payzone input {
+      width: 140px;
+    }
+
+    .payzone button {
+      padding: 16px 20px;
+    }
+
+    .pickSum button {
+      padding: 0px 7px;
+    }
+
+    .pickSum button {
+      font-size: 12px;
+    }
+  }
+
+  @media (max-width: 320px) {
+    .payzone input {
+      width: 107px;
+    }
+
+    .pickSum button {
+      padding: 0px 1px;
+    }
   }
 }
 </style>

@@ -57,27 +57,33 @@
     </template>
     <template #body>
       <div class="modal__inputs">
-        <form>
-          <label for="login" class="modal__label">Логин</label><br />
-          <input
-            type="text"
-            name="loggin"
-            id="loggin"
-            class="modal__input"
-            placeholder="Введите Логин"
-            v-model="username"
-          />
+        <div>
+          <form>
+            <div>
+              <label for="login" class="modal__label">Логин</label><br />
+              <input
+                type="text"
+                name="loggin"
+                id="loggin"
+                class="modal__input"
+                placeholder="Введите Логин"
+                v-model="username"
+              />
+            </div>
 
-          <label for="password" class="modal__label">Пароль</label><br />
-          <input
-            type="password"
-            name="password"
-            id="password"
-            class="modal__input"
-            placeholder="Введите пароль"
-            v-model="password"
-          />
-        </form>
+            <div>
+              <label for="password" class="modal__label">Пароль</label><br />
+              <input
+                type="password"
+                name="password"
+                id="password"
+                class="modal__input"
+                placeholder="Введите пароль"
+                v-model="password"
+              />
+            </div>
+          </form>
+        </div>
       </div>
       <div class="modal__btn">
         <button class="modal__signin" @click="login">Войти</button>
@@ -136,35 +142,44 @@
     </template>
     <template #body>
       <div class="modal__inputs">
-        <label for="email" class="modal__label">E-mail</label><br />
-        <input
-          type="email"
-          name="email"
-          id="email"
-          class="modal__input"
-          placeholder="Введите e-mail"
-          v-model="emailR"
-        />
+        <div>
+          <div>
+            <label for="email" class="modal__label">E-mail</label><br />
+            <input
+              type="email"
+              name="email"
+              id="email"
+              class="modal__input"
+              placeholder="Введите e-mail"
+              v-model="emailR"
+            />
+          </div>
 
-        <label for="login" class="modal__label">Логин</label><br />
-        <input
-          type="text"
-          name="login"
-          id="login"
-          class="modal__input"
-          placeholder="Введите логин"
-          v-model="usernameR"
-        />
-        <label for="repeat-password" class="modal__label">Введите пароль</label
-        ><br />
-        <input
-          type="password"
-          name="repeat-password"
-          id="repeat-password"
-          class="modal__input"
-          placeholder="Введите пароль"
-          v-model="passwordR"
-        />
+          <div>
+            <label for="login" class="modal__label">Логин</label><br />
+            <input
+              type="text"
+              name="login"
+              id="login"
+              class="modal__input"
+              placeholder="Введите логин"
+              v-model="usernameR"
+            />
+          </div>
+
+          <div>
+            <label for="repeat-password" class="modal__label">Введите пароль</label
+            ><br />
+            <input
+              type="password"
+              name="repeat-password"
+              id="repeat-password"
+              class="modal__input"
+              placeholder="Введите пароль"
+              v-model="passwordR"
+            />
+          </div>
+        </div>
       </div>
     </template>
     <template #footer>
@@ -270,8 +285,8 @@ export default {
 </script>
 <style scoped>
 .reg__btn {
-  padding-left: 50px;
-  padding-right: 50px;
+  display: flex;
+  justify-content: center;
 }
 .not__acc {
   display: flex;
@@ -300,7 +315,6 @@ export default {
   align-items: center;
   color: #fff;
   padding: 0.94vw 8.18vw 0.94vw 8.18vw;
-  width: 100%;
 }
 .haveacc__button {
   font-family: "Roboto";
@@ -342,7 +356,8 @@ export default {
 }
 .modal__inputs {
   padding-top: 4.17vw;
-  padding-left: 1.82vw;
+  display: flex;
+  justify-content: center;
 }
 .modal__input {
   background: radial-gradient(

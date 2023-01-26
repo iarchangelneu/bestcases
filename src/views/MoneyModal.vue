@@ -1,108 +1,68 @@
 <template>
-  <div
-    class="modal fade"
-    id="Money"
-    tabindex="-1"
-    aria-labelledby="Money"
-    aria-hidden="true"
-  >
-    <div class="modal-dialog modal-dialog-centered">
-      <div class="modal-contents">
+  <div class="modal fade" id="Money" tabindex="-1" aria-labelledby="Money" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
         <div class="modal-header">
-          <div class="money__main">
+          <div class="money__main text-center">
             <p>Пополнение баланса</p>
-            <div class="money__type">
-              <div class="money__typecontent">
-                <button class="money__btn money__active">
-                  Пополнение баланса
-                </button>
-                <button class="money__btn" @click="outPut()">
-                  Вывод средств
-                </button>
-              </div>
+
+            <div class="typebuttons d-flex justify-content-center">
+              <button class="inBtn btn__active">ПОПОЛНИТЬ БАЛАНС</button>
+              <button class="outBtn" @click="openOutModal()">ВЫВОД СРЕДСТВ</button>
             </div>
           </div>
         </div>
         <div class="modal-body">
-          <div class="money__system">
-            <p class="system__main">Порядок действий для пополнения баланса</p>
-            <p class="money__text">1. Выберите платежную систему</p>
-            <div class="system__type">
-              <div
-                :class="[
-                  'type__img__one',
-                  { payment__active: payment == 'onevision' },
-                ]"
-                @click="payment = 'onevision'"
-              >
-                <img
-                  src="../assets/img/one__vision.png"
-                  alt=""
-                  class="pay_img"
-                />
+          <div class="modalbody">
+            <h2>Порядок действий для пополнения баланса</h2>
+
+            <p class="mt-3">1. Выберите метод оплаты</p>
+
+            <div class="typesradio mt-4">
+              <div class="d-flex align-items-center mb-4">
+                <input type="radio" name="Type" id="cardType">
+                <label for="cardType">Банковская карта</label>
               </div>
-              <div
-                data-toggle="modal"
-                data-target="#PaymentError"
-                :class="[
-                  'type__img__one',
-                  { payment__active: payment == 'visa' },
-                ]"
-                @click="payment = 'visa'"
-              >
-                <img src="../assets/img/visa.png" alt="" class="pay_img" />
-              </div>
-              <div
-                data-toggle="modal"
-                data-target="#PaymentError"
-                :class="[
-                  'type__img__one',
-                  { payment__active: payment == 'mastercard' },
-                ]"
-                @click="payment = 'mastercard'"
-              >
-                <img
-                  src="../assets/img/mastercard.png"
-                  alt=""
-                  style=""
-                  class="pay_img"
-                />
+              <div class="d-flex align-items-center">
+                <input type="radio" name="Type" id="telType">
+                <label for="telType">Баланс мобильного телефона</label>
               </div>
             </div>
-            <div class="money__text__block">
-              <p class="money__text">
-                2. Подтвердите Ваше согласие с правилами нашей системы
-              </p>
-              <div class="money__checkbox">
-                <input type="checkbox" id="policy" name="policy" />
-                <label for="policy" class="money__label"
-                  >Я согласен с
-                  <a href="/terms">пользовательским соглашением</a> и
-                  <a href="/privacy">политикой конфиденциальности</a></label
-                >
-                <p class="money__text mt">
-                  3. Введите сумму, на которую Вы хотите пополнить личный счет,
-                  и нажмите на кнопку “Пополнить”. Вы будете переадресованы на
-                  сайт платежной системы.
-                </p>
-              </div>
+
+
+            <p class="mt-4">2. Подтвердите Ваше согласие с правилами нашей системы</p>
+
+            <div class="privacycheck d-flex align-items-center mt-4">
+
+              <input type="checkbox" name="privacy" id="privacy">
+
+              <label for="privacy">Я согласен с <a href="/terms">пользовательским соглашением</a> и <a
+                  href="/privacy">политикой конфиденциальности</a> </label>
+
             </div>
+
+            <p class="mt-4">3. Введите сумму, на которую Вы хотите пополнить личный счет, и нажмите на кнопку
+              “Пополнить”. Вы будете переадресованы на сайт платежной системы, где сможете завершить платеж.</p>
           </div>
         </div>
-        <div class="modal-footer">
-          <div class="money__complete">
-            <input
-              type="number"
-              name="money"
-              id="money"
-              v-model="paySum"
-              class="money__input"
-              placeholder="0 ₸"
-            />
-            <button class="complete__btn" @click="purchase">Пополнить баланс</button>
+
+        <div class="modalfooter">
+          <div class="payzone d-flex justify-content-between align-items-center">
+            <input type="number" name="paySum" id="paySum" v-model="paySum" placeholder="200 ₸">
+            <button id="inButton" @click="phonePur()">
+              <div class="spinner-border text-info outSpinner" role="status">
+                <span class="sr-only">Loading...</span>
+              </div>
+              <span id="buttonText">ПОПОЛНИТЬ</span>
+            </button>
           </div>
-          <div class="instr__link__cont mt-3 mb-3">
-            <a class="instr__link" href="/instruction">Инструкция по использованию карты для платежа</a>
+
+          <div class="pickSum d-flex align-items-center justify-content-between pt-4 pb-4">
+            <button @click="paySum = 200" :class="[{ 'sumActive': paySum == 200 }]">200 ₸</button>
+            <button @click="paySum = 1000" :class="[{ 'sumActive': paySum == 1000 }]">1000 ₸</button>
+            <button @click="paySum = 2000" :class="[{ 'sumActive': paySum == 2000 }]">2000 ₸</button>
+            <button @click="paySum = 5000" :class="[{ 'sumActive': paySum == 5000 }]">5000 ₸</button>
+            <button @click="paySum = 10000" :class="[{ 'sumActive': paySum == 10000 }]">10000 ₸</button>
           </div>
         </div>
       </div>
@@ -111,242 +71,394 @@
 </template>
 
 <script>
+
 export default {
   data() {
     return {
       payment: "",
-      paySum: '',
+      paySum: null,
+      isIn: 1,
+      ip: null,
     };
   },
   methods: {
-    outPut() {
+    openOutModal() {
       $("#Money").modal("hide");
       $("#OutputMoney").modal("show");
     },
-    purchase(){
-        if(this.paySum != ''){
-          axios
-          .post('https://bestcases.kz/api/vision_pay/', {cost: this.paySum})
+    phonePur() {
+      let span = document.querySelector('#buttonText')
+      let spin = document.querySelector('.outSpinner')
+      let card = document.querySelector('#cardType')
+      let phone = document.querySelector('#telType')
+      let button = document.querySelector('#inButton')
+
+      if (card.checked == false && phone.checked == false) {
+        alert("Выберите способ оплаты")
+      }
+
+      else if (this.paySum >= 200 && card.checked == true) {
+        this.ipGet()
+
+        var token = localStorage.getItem('userName')
+        axios
+          .post('https://bestcases.kz/api/vision_pay/', { cost: this.paySum, jwt_token: token, ip: this.ip })
           .then((res) => {
-              console.log(res)
-              window.location.href=res.data.url
+            console.log(res)
+            window.location.href = res.data.url
           })
           .catch((error) => {
             console.error(error);
           });
-        }
-        else{
-          alert('Введите сумму пополнения!')
-        }
-      },
-  },
+
+        span.style.display = 'None'
+        button.disabled = true
+        spin.classList.add('outSpinnerActive')
+
+        setTimeout(() => {
+          span.style.display = 'block'
+          button.disabled = false
+          spin.classList.remove('outSpinnerActive')
+        }, 30000);
+
+      }
+      else if (this.paySum >= 200 && phone.checked == true) {
+        this.ipGet()
+
+        var token = localStorage.getItem('userName')
+        axios
+          .post('https://bestcases.kz/api/vision_mobile_pay/', { cost: this.paySum, jwt_token: token, ip: this.ip })
+          .then((res) => {
+            console.log(res)
+            window.location.href = res.data.url
+          })
+          .catch((error) => {
+            console.error(error);
+          });
+
+        span.style.display = 'None'
+        button.disabled = true
+        spin.classList.add('outSpinnerActive')
+
+        setTimeout(() => {
+          span.style.display = 'block'
+          button.disabled = false
+          spin.classList.remove('outSpinnerActive')
+        }, 30000);
+      }
+      else {
+        alert('Сумма должна быть ни меньше 200')
+      }
+
+    },
+    ipGet() {
+      axios({
+        method: 'get',
+        url: 'https://api.ipify.org'
+      })
+        .then((response) => {
+          this.ip = response.data
+        })
+    },
+  }
 };
 </script>
 
-<style scpoed>
-.instr__link__cont{
-  display: flex;
-  align-items: flex-end;
-  text-align: center;
-  justify-content: center
+<style scoped>
+.modal-content {
+  border: 3px solid rgba(234, 196, 139, 0.5);
 }
-.instr__link{
-    font-weight: 500;
-    font-size: 1.1vw;
-    color: #fff;
-    text-decoration: underline;
+
+.outSpinnerActive {
+  display: block !important;
 }
-.instr__link:hover{
-  color: #fff;
+
+.outSpinner {
+  display: none;
 }
-.money__typecontent {
-  display: flex;
+
+.sumActive {
+  background: linear-gradient(235.92deg, #753EF9 14.85%, #9D75FF 87.62%) !important;
+  border: 0 !important;
+  transition: all .3s ease;
 }
-.complete__btn {
-  background: rgba(241, 90, 36, 0.4);
-  border: 1px solid #f15a24;
-  box-sizing: border-box;
-  border-radius: 5px;
-  color: #fff;
-  padding: 0.94vw 8.70vw 0.94vw 8.70vw;
-  font-weight: 400;
-  font-size: 1.04vw;
-  border: 0;
-  -webkit-clip-path: polygon(0 10%, 100% 0, 100% -90%, 0 100%);
-  clip-path: polygon(10% 0, 0 100%, 90% 100%, 100% 0);
-  margin-bottom:2.08vw;
-}
-::placeholder {
-  color: #fff;
-  font-size: 1.25vw;
-  text-align: center;
-}
-.money__input {
+
+.pickSum button {
+  padding: 12px 20px;
   background: rgba(255, 255, 255, 0.1);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  box-sizing: border-box;
   border-radius: 5px;
+  border: 2px solid #EAC48B;
+
+  font-family: 'Exo', sans-serif;
+  font-style: normal;
   font-weight: 500;
-  font-size: 2.08vw;
-  color: #fff;
-  width: 16.77vw;
-  margin-bottom: 1.25vw;
+  font-size: 18px;
+  line-height: 24px;
+  color: #FFFFFF;
+  transition: all .3s ease;
 }
-.mt {
-  margin-top: 2.5vw;
+
+.payzone button {
+  background: #F15A24;
+  border-radius: 5px;
+  padding: 16px 73px;
+  border: 0;
+
+  font-family: 'Exo', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 27px;
+  transition: all .3s ease;
+  /* identical to box height */
+
+
+  color: #FFFFFF;
+
 }
-.money__checkbox {
-  margin-top: 2.5vw;
+
+.payzone input {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 5px;
+  border: 2px solid #EAC48B;
+  font-family: 'Exo', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 28px;
+  line-height: 37px;
+  text-align: right;
+  height: 59px;
+
+  color: #FFFFFF;
 }
-input[type="checkbox"] {
-  transform: scale(1.5);
-  padding: 0.52vw;
+
+.modalfooter {
+  padding: 0 50px;
 }
-.money__label {
-  font-family: "Robotov";
-  margin-left: 1.3vw;
-  font-weight: 400;
-  font-size: 0.73vw;
-  color: #fff;
-}
-.money__label a {
+
+.privacycheck a {
   text-decoration: underline;
-  color: #fff;
-}
-.money__text__block {
-  margin-top: 0.65vw;
-}
-.type__img__one {
-  border: 1px solid #f7f7f7;
-  box-sizing: border-box;
-  border-radius: 7px;
-  margin-right: 1.69vw;
-  padding: 0.52vw 5.56vw 0.52vw 1.56vw;
-  cursor: pointer;
-  width: 7.448vw;
-  display: flex;
-  align-items: center;
-}
-.payment__active {
-  border: 1px solid #f15a24;
-}
-.pay_img {
-  width: 3.8vw;
-}
-
-.type__img__visa {
-  border: 3px solid #f7f7f7;
-  box-sizing: border-box;
-  border-radius: 7px;
-  margin-right: 4.69vw;
-  padding: 2.45vw 1.77vw 2.45vw 1.77vw;
-  cursor: pointer;
-}
-.type__img__master {
-  border: 3px solid #f7f7f7;
-  box-sizing: border-box;
-  border-radius: 7px;
-  padding: 1.04vw 1.77vw 1.04vw 1.77vw;
-  cursor: pointer;
-}
-
-.system__type {
-  display: flex;
-  margin-top: 2.08vw;
-}
-.money__text {
-  font-family: "Roboto";
+  font-family: 'Exo', sans-serif;
+  font-style: normal;
   font-weight: 400;
-  font-size: 0.83vw;
-  color: #fff;
+  font-size: 16px;
+  line-height: 21px;
+  color: #FFFFFF;
 }
-.money__system {
-  margin-top: 3.65vw;
-  padding-left: 2.6vw;
+
+.privacycheck label {
+  font-family: 'Exo', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 21px;
+  color: #FFFFFF;
+  margin-left: 20px;
+  margin-bottom: 0;
 }
-.system__main {
-  font-family: "Roboto";
+
+.privacycheck input {
+  width: 20px;
+  height: 20px;
+}
+
+.typesradio input {
+  width: 25px;
+  height: 25px;
+}
+
+.typesradio label {
+  font-family: 'Exo', sans-serif;
+  font-style: normal;
   font-weight: 500;
-  font-size: 1.04vw;
-  color: #fff;
+  font-size: 20px;
+  line-height: 27px;
+  color: #FFFFFF;
+  margin-bottom: 0;
+  margin-left: 16px;
 }
-.money__type {
-  margin-left: 8.5vw;
+
+.modalbody p {
+  font-family: 'Exo', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 21px;
+
+  color: #FFFFFF;
 }
-.money__main {
-  font-weight: 900;
-  font-size: 1.25vw;
-  text-align: center;
-  padding-top: 0.81vw;
-  color: #fff;
+
+.modalbody {
+  padding: 0 35px;
 }
-.modal-dialog {
-  min-width: 41.67vw;
+
+h2 {
+  font-family: 'Exo', sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 27px;
+  color: #FFFFFF;
 }
-.modal-contents {
-  background: #1a1814;
+
+.outBtn {
+  background: transparent;
+  border-radius: 10px;
+  padding: 12px 42px;
   border: 1px solid rgba(234, 196, 139, 0.5);
-  box-sizing: border-box;
-  border-radius: 5px;
-  position: relative;
-  display: flex;
-  flex-direction: column;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  border-left: 0;
   width: 100%;
-  pointer-events: auto;
-  outline: 0;
+
+
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 21px;
+  font-family: 'Exo', sans-serif;
+  color: #fff;
 }
-.modal-header,
-.modal-footer {
-  border-bottom: 0;
-  border-top: 0;
+
+.inBtn {
+  background: #EAC48B;
+  ;
+  border-radius: 10px;
+  padding: 12px 42px;
+  border: 0;
+  width: 100%;
+
+
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 21px;
+  font-family: 'Exo', sans-serif;
+  color: #fff;
 }
-.modal-footer {
-  display: contents;
+
+.money__main p {
+  color: #fff;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 32px;
 }
-@media screen and (max-width: 480px) {
-  .pay_img {
-    width: 10vw;
+
+.money__main {
+  padding: 20px 50px;
+}
+
+.modal-dialog {
+  width: 100% !important;
+  min-width: 40% !important;
+}
+
+@media (max-width: 1440px) {
+  .payzone input {
+    width: 180px;
   }
-  .money__type {
-    margin-left: 22.5vw;
+
+  .pickSum button {
+    padding: 12px 10px;
   }
-  .money__main {
-    font-size: 3.2vw !important;
+
+  .outBtn,
+  .inBtn {
+    padding: 12px 15px;
   }
-  .money__btn {
-    font-size: 2.2vw !important;
-    border: 1px solid #f7f7f7 !important;
+}
+
+@media (max-width: 1366px) {
+  .payzone button {
+    padding: 16px 43px;
   }
-  .money__btn img {
-    width: 2.8vw !important;
+}
+
+@media (max-width: 1024px) {
+  h2 {
+    font-size: 16px;
   }
-  .system__main {
-    font-size: 3vw !important;
+
+  .typesradio label {
+    font-size: 16px;
   }
-  .money__text {
-    font-size: 2.3vw !important;
+
+  .inBtn,
+  .outBtn {
+    font-size: 14px;
   }
-  .money__label {
-    font-size: 2.1vw !important;
+
+  .pickSum button {
+    font-size: 14px;
   }
-  input[type="checkbox"] {
-    transform: scale(1) !important;
-    margin-left: -13px;
+
+  .payzone button {
+    font-size: 16px;
   }
-  .money__input {
-    border: 1px solid rgba(247, 247, 247, 0.6) !important;
-    font-size: 2.5vw !important;
-    height: 7vw !important;
+
+  @media (max-width: 480px) {
+    .money__main {
+      padding: 20px 20px;
+    }
+
+    .modalbody {
+      padding: 0 5px;
+    }
+
+    .modalfooter {
+      padding: 0 20px;
+    }
+
+    .privacycheck label,
+    .modalbody p,
+    .typesradio label {
+      font-size: 14px;
+    }
+
+    .payzone button {
+      padding: 16px 34px;
+    }
+
+    .privacycheck input {
+      width: 50px;
+      height: 50px;
+    }
   }
-  ::placeholder {
-    font-size: 2.2vw !important;
+
+  @media (max-width: 390px) {
+
+    .outBtn,
+    .inBtn {
+      padding: 12px 0px;
+    }
+
+    h2 {
+      font-size: 14px;
+    }
+
+    .payzone input {
+      width: 140px;
+    }
+
+    .payzone button {
+      padding: 16px 20px;
+    }
+
+    .pickSum button {
+      padding: 0px 7px;
+    }
+
+    .pickSum button {
+      font-size: 12px;
+    }
   }
-  .complete__btn {
-    font-size: 2.2vw !important;
-  }
-  .type__img__one {
-    border: 1px solid #f7f7f7 !important;
-     padding: 0.52vw 12.56vw 0.52vw 1.56vw;
+
+  @media (max-width: 320px) {
+    .payzone input {
+      width: 107px;
+    }
+
+    .pickSum button {
+      padding: 0px 1px;
+    }
   }
 }
 </style>

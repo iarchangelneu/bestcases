@@ -50,6 +50,8 @@ const Mixin = {
                             title: 'Успешно',
                             text: 'Теперь вы можете авторизоваться',
                           })
+                          $("#Reg").modal("hide");
+                          $("#LogReg").modal("show");
                         console.log(res);
                     }
                 })
